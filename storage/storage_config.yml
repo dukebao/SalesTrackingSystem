@@ -5,3 +5,10 @@ datastore:
   hostname: localhost
   port: 3306
   db: inventory
+
+cloudstore:
+  user: user
+  password: Steven646!
+  hostname: steven-kafka-apple-banana.eastus.cloudapp.azure.com
+  port: 3306
+  db: inventory

@@ -22,7 +22,8 @@ TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 
 with open('storage_config.yml', 'r') as f:
     storage_config = yaml.safe_load(f.read())
-STORAGE_SETTING = storage_config['datastore']
+STORAGE_SETTING = storage_config['datastore'] # for local storage
+STORAGE_SETTING = storage_config['cloudstore'] # for cloud storage
 print(STORAGE_SETTING)
 
 with open('app_config.yml', 'r') as f:
