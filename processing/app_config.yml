@@ -1,0 +1,9 @@
+version: 1
+datastore:
+  filename: stats.sqlite
+scheduler:
+  period_sec: 5
+storage_merch:
+  url: http://localhost:8090/merch-stats
+storage_food:
+  url: http://localhost:8090/food-stats

@@ -1,0 +1,13 @@
+2022-09-29 15:25:49,452 - basicLogger - INFO - Merch Storage Service : trace_id: fb8576c2-a990-46b0-be27-5fe29c7d6c14 status code 200
+2022-09-29 15:25:51,264 - basicLogger - INFO - Merch Storage Service : trace_id: e2891e7f-f767-432a-ace7-9b362b0e2604 status code 200
+2022-09-29 15:25:52,278 - basicLogger - INFO - Merch Storage Service : trace_id: 46548c92-21cd-4717-960f-8a60c7f7335e status code 200
+2022-09-29 15:25:53,601 - basicLogger - INFO - Merch Storage Service : trace_id: 0b1cc51f-ad18-48c3-9267-08ed15090037 status code 200
+2022-09-29 15:25:55,126 - basicLogger - INFO - Merch Storage Service : trace_id: c6828ff6-fbc6-4a3a-94da-28d88848eb68 status code 200
+2022-09-29 15:26:03,948 - basicLogger - INFO - Merch Storage Service : trace_id: 5b00febd-d3a3-4e6f-b7cb-43c12fce07f8 status code 200
+2022-09-29 15:26:04,436 - basicLogger - INFO - Merch Storage Service : trace_id: df76e802-6b15-4be0-a305-7e815cf10123 status code 200
+2022-09-29 16:02:38,289 - basicLogger - INFO - Merch Storage Service : trace_id: 77e55cf3-9315-4c8b-ab67-ad0fa45eb98e status code 500
+2022-09-29 16:05:49,189 - basicLogger - INFO - Food Storage Service : trace_id: 0889f0cd-dad5-484c-a8d7-bb89f1c16635 status code 500
+2022-09-29 16:08:18,239 - basicLogger - INFO - Merch Storage Service : trace_id: e45db428-2c68-4bd8-ad92-e1a98d9c9b61 status code 500
+2022-09-29 16:11:09,054 - basicLogger - INFO - Merch Storage Service : trace_id: 15561a3c-7d8a-4c47-8c11-2d62c8f3139e status code 200
+2022-09-29 16:11:58,296 - basicLogger - INFO - Merch Storage Service : trace_id: e30750ac-104a-4d60-b6d3-6d056d9fda5c status code 200
+2022-09-29 16:11:58,780 - basicLogger - INFO - Merch Storage Service : trace_id: 38a9235b-a9ba-4ef7-aaaa-56197182001f status code 200

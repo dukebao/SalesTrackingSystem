@@ -1,0 +1,101 @@
+openapi: 3.0.0
+servers: 
+  - url: 'http://localhost:8080'
+info:
+  description: This is retail API 
+  version: version1
+  title: Somechain Retail Inventory API
+  contact:
+    email: steven.chang420@gmail.com
+tags:
+  - name: admins
+    description: Secured Admin-only calls
+  - name: developers
+    description: Operations available to regular developers
+  - name : customer
+    description: Operations available to public customers ( public route )
+  - name : staff
+    description: Operations available for internal staff ( private and require authentication)
+paths:
+  /merch-inventory:
+    post:
+      tags:
+        - admins
+        - staff
+      summary: adds an inventory item
+      operationId: app.addmerchInventory
+      description: Adds an item to the system
+      responses:
+        '201':
+          description: item created
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/merchItem'
+        description: Inventory item to add
+  /food-inventory:
+    post:
+      tags:
+        - admins
+      summary: adds an inventory item
+      operationId: app.addfoodInventory
+      description: Adds an item to the system
+      responses:
+        '201':
+          description: item created
+        '400':
+          description: 'invalid input, object invalid'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/foodItem'
+        description: Inventory item to add
+components:
+  schemas:
+    merchItem:
+      type: object
+      required:
+        - SKU
+        - merchName
+        - merchPrice
+        - merchQuantity
+      properties:
+        SKU:
+          type: string
+          example: SC123456
+        merchName:
+          type: string
+          example: Iron Man Cup
+        merchPrice:
+          type: number
+          format: number
+          example: 18.99
+        merchQuantity:
+          type : integer
+          format : integer
+          example : 2
+    foodItem:
+      type: object
+      required:
+        - foodName
+        - foodPrice
+        - foodQuantity
+        - expirationDate
+      properties:
+        foodName:
+          type: string
+          example: Hulk Juice
+        foodPrice:
+          type: number
+          example: 4.50
+        foodQuantity:
+          type: integer
+          example: 1
+        expirationDate:
+          type : string
+          format : date-time
+          example: '2022-02-45T09:12:33.001Z'

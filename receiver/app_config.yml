@@ -1,0 +1,6 @@
+version: 1
+storage_merch:
+  url: http://127.0.0.1:8090/merch-inventory
+storage_food:
+  url: http://127.0.0.1:8090/food-inventory
+  

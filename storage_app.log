@@ -1,0 +1,17 @@
+2022-10-13 14:03:28,523 - basicLogger - INFO - Merch Storage Service : trace_id: 80241677-2258-490b-a66d-b1eb7a6f69e1 write to database inventory table merch_inventory
+2022-10-13 14:04:39,081 - basicLogger - INFO - Merch Storage Service : trace_id: ad684092-2dbe-4f3e-8f6c-07b819a3b522 write to database inventory table merch_inventory
+2022-10-13 14:04:39,510 - basicLogger - INFO - Merch Storage Service : trace_id: c04acfd2-574a-42d0-a799-44b36b3b3393 write to database inventory table merch_inventory
+2022-10-13 14:04:39,948 - basicLogger - INFO - Merch Storage Service : trace_id: c9269837-763d-42de-943c-f8bd8269005f write to database inventory table merch_inventory
+2022-10-13 14:06:21,513 - basicLogger - INFO - Merch Storage Service : trace_id: c35b49c7-866b-47b5-9211-d5f88a22eb28 write to database inventory table merch_inventory
+2022-10-13 14:07:45,785 - basicLogger - INFO - Food Storage Service : trace_id: 2c5d52f1-a521-479f-834a-8f86811a858a write to database inventory table food_inventory
+2022-10-13 14:08:31,108 - basicLogger - INFO - Food Storage Service : trace_id: 30855942-7a88-423f-9691-cb66b9b38331 write to database inventory table food_inventory
+2022-10-13 14:08:31,652 - basicLogger - INFO - Food Storage Service : trace_id: ff3a2cd5-e800-440c-9e53-0a83e00261ab write to database inventory table food_inventory
+2022-10-13 14:08:43,720 - basicLogger - INFO - Merch Storage Service : trace_id: 5856baea-4b8b-4823-8878-6613520847b8 write to database inventory table merch_inventory
+2022-10-13 14:09:08,599 - basicLogger - INFO - Merch Storage Service : trace_id: 15e26623-e067-4998-bb17-05a72faea0d9 write to database inventory table merch_inventory
+2022-10-13 14:09:08,802 - basicLogger - INFO - Merch Storage Service : trace_id: 74a1e7e3-e20e-4717-83f9-c6ce18d08e17 write to database inventory table merch_inventory
+2022-10-13 14:15:58,762 - basicLogger - INFO - Merch Storage Service : trace_id: c2a7ad2b-0417-4e57-93a3-aae667be4c77 write to database inventory table merch_inventory
+2022-10-13 14:15:58,949 - basicLogger - INFO - Merch Storage Service : trace_id: d00896ec-5492-442a-b753-73317cdbd0a8 write to database inventory table merch_inventory
+2022-10-13 14:15:59,786 - basicLogger - INFO - Merch Storage Service : trace_id: 991a06b0-8331-4548-8d6b-233a3a8dc424 write to database inventory table merch_inventory
+2022-10-13 14:16:20,114 - basicLogger - INFO - Food Storage Service : trace_id: 7c45dc82-dfe0-4d73-9990-29dee64b8a84 write to database inventory table food_inventory
+2022-10-13 14:16:20,626 - basicLogger - INFO - Food Storage Service : trace_id: 576d0cb1-ba8f-49c8-80a4-ad7128058335 write to database inventory table food_inventory
+2022-10-13 14:16:23,228 - basicLogger - INFO - Food Storage Service : trace_id: 33d7f7b7-8976-4e8d-90ff-d7cc95e66353 write to database inventory table food_inventory
