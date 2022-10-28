@@ -1,35 +1,22 @@
-import sqlite3
-import mysql.connector
+from sqlalchemy import create_engine, MetaData
+from sqlalchemy_utils import database_exists, create_database
+from merch import Merch
+from food import Food
+import yaml
 
-mydb = mysql.connector.connect(
-  host="localhost",
-  user="root",
-  password="Steven646!",
-  database="inventory"
-)
+with open('storage_config.yml', 'r') as f:
+  cfg = yaml.safe_load(f)
 
+db_con = f"mysql+pymysql://{cfg['cloudstore']['user']}:{cfg['cloudstore']['password']}@{cfg['cloudstore']['hostname']}:{cfg['cloudstore']['port']}/{cfg['cloudstore']['db']}"
+engine = create_engine(db_con, echo=True, future=True)
 
+if not database_exists(engine.url):
+    create_database(engine.url)
+else:
+  # Connect the database if exists.
+  connection = engine.connect()
 
-c = mydb.cursor()
-c.execute('''
-          CREATE TABLE merch_inventory
-          (SKU VARCHAR(20) NOT NULL, 
-           merchPrice FLOAT NOT NULL,
-           merchQuantity INTEGER NOT NULL,
-           merchName VARCHAR(100) NOT NULL,
-           date_added DATETIME NOT NULL,
-           trace_id VARCHAR(100) NOT NULL)
-          ''')
+metadata = MetaData(engine)
 
-c.execute('''
-          CREATE TABLE food_inventory
-          (foodName VARCHAR(20) NOT NULL, 
-           foodPrice FLOAT NOT NULL,
-           foodQuantity INTEGER NOT NULL,
-           expirationDate VARCHAR(100) NOT NULL,
-           date_added DATETIME NOT NULL,
-           trace_id VARCHAR(100) NOT NULL)
-          ''')
-
-mydb.commit()
-mydb.close()
+Merch.metadata.create_all(engine)
+Food.metadata.create_all(engine)

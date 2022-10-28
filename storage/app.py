@@ -17,6 +17,12 @@ import logging
 import uuid
 import logging.config
 from flask import Flask, request, jsonify
+from pykafka import KafkaClient
+from pykafka.common import OffsetType
+from threading import Thread
+
+
+
 
 TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 
@@ -25,6 +31,8 @@ with open('storage_config.yml', 'r') as f:
 STORAGE_SETTING = storage_config['datastore'] # for local storage
 STORAGE_SETTING = storage_config['cloudstore'] # for cloud storage
 print(STORAGE_SETTING)
+
+
 
 with open('app_config.yml', 'r') as f:
     app_config = yaml.safe_load(f.read())
@@ -42,21 +50,6 @@ DB_ENGINE = create_engine(
     f"mysql+pymysql://{STORAGE_SETTING['user']}:{STORAGE_SETTING['password']}@{STORAGE_SETTING['hostname']}:{STORAGE_SETTING['port']}/{STORAGE_SETTING['db']}")
 Base.metadata.bind = DB_ENGINE
 DB_SESSION = sessionmaker(bind=DB_ENGINE)
-
-def write_to_json(timestamp, body):
-    event = {}
-    event['timestamp'] = str(timestamp)
-    event['eventMessage'] = f'Inventory updated, {body} added to database !'
-
-    db = json.load(open(EVENT_FILE_OUT, 'r'))
-    print(len(db))
-    if len(db) < MAX_VALUES_ALLOWED_IN_DB:
-        db.insert(0, event)
-    else:
-        db.pop()
-        db.insert(0, event)
-    with open(EVENT_FILE_OUT, 'w') as outfile:
-        json.dump(db, outfile)
 
 def add_to_database(body, table_name):
     session = DB_SESSION()
@@ -77,26 +70,26 @@ def add_to_database(body, table_name):
     session.close()
 
 # function to handle endpoint
-def addmerchInventory(body):
-    print(request.json)
-    body = request.json
+# def addmerchInventory(body):
+#     print(request.json)
+#     body = request.json
 
-    add_to_database(body, TABLE_NAME_OPTIONS[0])
+#     add_to_database(body, TABLE_NAME_OPTIONS[0])
 
-    success_message = {'message': 'merch inventory added',
-                       'status': 201, 'content': request.json}
-    logger.info(f'Merch Storage Service : trace_id: {body["trace_id"]} write to database inventory table merch_inventory')
-    return success_message
+#     success_message = {'message': 'merch inventory added',
+#                        'status': 201, 'content': request.json}
+#     logger.info(f'Merch Storage Service : trace_id: {body["trace_id"]} write to database inventory table merch_inventory')
+#     return success_message
 
 
-def addfoodInventory(body):
-    print(request.json)
-    body = request.json
-    add_to_database(body, TABLE_NAME_OPTIONS[1])
-    success_message = {'message': 'food inventory added',
-                       'status': 201, 'content': request.json}
-    logger.info(f'Food Storage Service : trace_id: {body["trace_id"]} write to database inventory table food_inventory')
-    return success_message
+# def addfoodInventory(body):
+#     print(request.json)
+#     body = request.json
+#     add_to_database(body, TABLE_NAME_OPTIONS[1])
+#     success_message = {'message': 'food inventory added',
+#                        'status': 201, 'content': request.json}
+#     logger.info(f'Food Storage Service : trace_id: {body["trace_id"]} write to database inventory table food_inventory')
+#     return success_message
 
 def getMerchStats():
     print(request.args['timestamp'])
@@ -146,7 +139,33 @@ def queryDbStats(timestamp, table_name):
 
     return result_list
 
-
+def process_message():
+    hostname = "%s:%d" % (app_config["kafka"]["hostname"],app_config["kafka"]["port"])
+    client = KafkaClient(hosts=hostname)
+    topic = client.topics[str.encode(app_config["kafka"]["topic"])]
+    # Create a consume on a consumer group, that only reads new messages
+    # (uncommitted messages) when the service re-starts (i.e., it doesn't
+    # read all the old messages from the history in the message queue).
+    consumer = topic.get_simple_consumer(consumer_group=b'event_group',
+    reset_offset_on_start=False,
+    auto_offset_reset=OffsetType.LATEST)
+    # This is blocking - it will wait for a new message
+    for msg in consumer:
+        msg_str = msg.value.decode('utf-8')
+        msg = json.loads(msg_str)
+        logger.info("Message: %s" % msg)
+        payload = msg["payload"]
+        if msg["type"] == 'merch inventory': # Change this to your event type
+        # Store the event1 (i.e., the payload) to the DB
+            add_to_database(payload, TABLE_NAME_OPTIONS[0])
+    
+            # Commit the message so that it is not read again
+        elif msg["type"] == "food inventory": # Change this to your event type
+        # Store the event2 (i.e., the payload) to the DB
+        # Commit the new message as being read
+            add_to_database(payload, TABLE_NAME_OPTIONS[1])
+ 
+        consumer.commit_offsets()
 
 app = connexion.FlaskApp(__name__, specification_dir='')
 app.add_api('STEVENCHANG420-RetailFoodAPI_Template-1.0.0.yaml',
@@ -154,5 +173,7 @@ app.add_api('STEVENCHANG420-RetailFoodAPI_Template-1.0.0.yaml',
             validate_responses=True)
 
 if __name__ == '__main__':
-
+    t1 = Thread(target=process_message)
+    t1.setDaemon(True)
+    t1.start()
     app.run(port=8090)
