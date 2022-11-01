@@ -101,6 +101,58 @@ def addfoodInventory(body):
     return msg, 201
 
 
+def getMerchAudit(index):
+    kafka_config = app_config['kafka']
+    host_info = f"{kafka_config['hostname']}:{kafka_config['port']}"
+    client = KafkaClient(hosts=host_info)
+    topic = client.topics[str.encode(kafka_config["topic"])]
+    # Here we reset the offset on start so that we retrieve
+    # messages at the beginning of the message queue.
+    # To prevent the for loop from blocking, we set the timeout to
+    # 100ms. There is a risk that this loop never stops if the
+    # index is large and messages are constantly being received!
+    consumer = topic.get_simple_consumer(reset_offset_on_start=True,
+                                         consumer_timeout_ms=1000)
+    logger.info("Retrieving merch at index %d" % index)
+    try:
+        for msg in consumer:
+            msg_str = msg.value.decode('utf-8')
+            msg = json.loads(msg_str)
+            # Find the event at the index you want and
+            # return code 200
+            # i.e., return event, 200
+    except:
+        logger.error("No more messages found")
+    logger.error("Could not find merch at index %d" % index)
+    return {"message": "Not Found"}, 404
+
+def getFoodAudit(index):
+    kafka_config = app_config['kafka']
+    host_info = f"{kafka_config['hostname']}:{kafka_config['port']}"
+    client = KafkaClient(hosts=host_info)
+    topic = client.topics[str.encode(kafka_config["topic"])]
+    # Here we reset the offset on start so that we retrieve
+    # messages at the beginning of the message queue.
+    # To prevent the for loop from blocking, we set the timeout to
+    # 100ms. There is a risk that this loop never stops if the
+    # index is large and messages are constantly being received!
+    consumer = topic.get_simple_consumer(reset_offset_on_start=True,
+                                            consumer_timeout_ms=1000)
+    logger.info("Retrieving food at index %d" % index)
+    try:
+        for msg in consumer:
+            msg_str = msg.value.decode('utf-8')
+            msg = json.loads(msg_str)
+            # Find the event at the index you want and
+            # return code 200
+            # i.e., return event, 200
+    except:
+        logger.error("No more messages found")
+    logger.error("Could not find food at index %d" % index)
+    return {"message": "Not Found"}, 404        
+
+
+
 app = connexion.FlaskApp(__name__, specification_dir='')
 app.add_api('STEVENCHANG420-RetailFoodAPI_Template-1.0.0.yaml',
             strict_validation=True,

@@ -54,6 +54,47 @@ paths:
             schema:
               $ref: '#/components/schemas/foodItem'
         description: Inventory item to add
+  /merch-audit:
+    get:
+      summary: get index number of merch history 
+      operationId: app.getMerchAudit
+      description: get index number of merch history 
+      parameters:
+        - name: index
+          in: query
+          description: get the merch index in eventstore 
+          schema:
+            type: integer
+            example: 10
+      responses: 
+        200: 
+          description: successfully returned a merch event 
+          content:
+            application/json:
+              schema: 
+                type: object
+                items:
+                  $ref: '#/components/schemas/merchHistory'
+        400:
+          description: "invalid request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema: 
+                type: object 
+                properties:
+                  message:
+                    type: string 
+
 components:
   schemas:
     merchItem:
@@ -80,6 +121,47 @@ components:
           example : 2
     foodItem:
       type: object
+      required:
+        - foodName
+        - foodPrice
+        - foodQuantity
+        - expirationDate
+      properties:
+        foodName:
+          type: string
+          example: Hulk Juice
+        foodPrice:
+          type: number
+          example: 4.50
+        foodQuantity:
+          type: integer
+          example: 1
+        expirationDate:
+          type : string
+          format : date-time
+          example: '2022-02-45T09:12:33.001Z'
+    merchHistory:
+      required:
+        - SKU
+        - merchName
+        - merchPrice
+        - merchQuantity
+      properties:
+        SKU:
+          type: string
+          example: SC123456
+        merchName:
+          type: string
+          example: Iron Man Cup
+        merchPrice:
+          type: number
+          format: number
+          example: 18.99
+        merchQuantity:
+          type : integer
+          format : integer
+          example : 2
+    foodHistory:
       required:
         - foodName
         - foodPrice
