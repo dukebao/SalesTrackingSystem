@@ -21,9 +21,6 @@ from pykafka import KafkaClient
 from pykafka.common import OffsetType
 from threading import Thread
 
-
-
-
 TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 
 with open('storage_config.yml', 'r') as f:
