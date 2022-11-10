@@ -1,3 +1,5 @@
 deployment/.env
 storage/storage_config.yml
 venv/*
+receiver/receiver_app.log
+storage/storage_app.log
