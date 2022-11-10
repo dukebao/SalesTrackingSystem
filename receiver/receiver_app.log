@@ -114,3 +114,5 @@
 2022-10-31 23:15:38,741 - basicLogger - INFO - Merch Receiver Service : trace_id: b0804217-40c1-401d-994f-d37cda106e4b status code 201
 2022-10-31 23:16:41,734 - basicLogger - INFO - Food Receiver Service : trace_id: 24490fe7-c29b-4fbd-8a55-e6bcbafc4483 status code 201
 2022-10-31 23:18:36,499 - basicLogger - INFO - Food Receiver Service : trace_id: 126186a9-d2b3-424a-a39e-7aa0696e8e9f status code 201
+2022-10-31 23:49:07,429 - basicLogger - INFO - Merch Receiver Service : trace_id: 5fddaa32-a07d-47c4-93c0-14f821629671 status code 201
+2022-10-31 23:49:36,867 - basicLogger - INFO - Merch Receiver Service : trace_id: 1759a4a8-e2e2-4cbe-837d-f81fd3c6d29e status code 201
