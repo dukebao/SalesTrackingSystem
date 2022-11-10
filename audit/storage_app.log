@@ -1,0 +1,61 @@
+2022-10-31 22:45:00,418 - basicLogger - INFO - retrieving merch audit trail at 1
+2022-10-31 22:45:06,531 - basicLogger - INFO - retrieving merch audit trail at 2
+2022-10-31 22:45:11,461 - basicLogger - INFO - retrieving merch audit trail at 3
+2022-10-31 22:45:15,603 - basicLogger - INFO - retrieving merch audit trail at 4
+2022-10-31 22:45:18,757 - basicLogger - INFO - retrieving merch audit trail at 5
+2022-10-31 22:45:27,531 - basicLogger - INFO - retrieving merch audit trail at 1
+2022-10-31 22:45:47,758 - basicLogger - INFO - retrieving merch audit trail at 4
+2022-10-31 22:45:52,658 - basicLogger - INFO - retrieving merch audit trail at 6
+2022-10-31 22:53:07,140 - basicLogger - INFO - retrieving merch audit trail at 1
+2022-10-31 22:53:12,257 - basicLogger - INFO - retrieving merch audit trail at 2
+2022-10-31 22:53:18,087 - basicLogger - INFO - retrieving merch audit trail at 3
+2022-10-31 22:53:22,591 - basicLogger - INFO - retrieving merch audit trail at 1
+2022-10-31 22:54:08,208 - basicLogger - INFO - retrieving merch audit trail at 1
+2022-10-31 22:55:53,321 - basicLogger - INFO - retrieving merch audit trail at 1
+2022-10-31 22:56:40,843 - basicLogger - INFO - retrieving merch audit trail at 1
+2022-10-31 22:57:33,269 - basicLogger - INFO - retrieving merch audit trail at 1
+2022-10-31 22:58:33,561 - basicLogger - INFO - retrieving merch audit trail at 1
+2022-10-31 22:58:41,192 - basicLogger - INFO - retrieving merch audit trail at 6
+2022-10-31 22:58:49,391 - basicLogger - INFO - retrieving merch audit trail at 7
+2022-10-31 22:58:54,925 - basicLogger - INFO - retrieving merch audit trail at 8
+2022-10-31 22:58:56,009 - basicLogger - ERROR - No more messages
+2022-10-31 22:58:56,009 - basicLogger - ERROR - could not find merch audit trail at 8
+2022-10-31 22:59:07,024 - basicLogger - INFO - retrieving merch audit trail at 9
+2022-10-31 22:59:08,092 - basicLogger - ERROR - No more messages
+2022-10-31 22:59:08,092 - basicLogger - ERROR - could not find merch audit trail at 9
+2022-10-31 22:59:11,945 - basicLogger - INFO - retrieving merch audit trail at 8
+2022-10-31 22:59:13,015 - basicLogger - ERROR - No more messages
+2022-10-31 22:59:13,015 - basicLogger - ERROR - could not find merch audit trail at 8
+2022-10-31 22:59:16,915 - basicLogger - INFO - retrieving merch audit trail at 7
+2022-10-31 23:03:09,447 - basicLogger - INFO - retrieving merch audit trail at 2
+2022-10-31 23:04:13,925 - basicLogger - INFO - retrieving merch audit trail at 2
+2022-10-31 23:04:18,921 - basicLogger - INFO - retrieving merch audit trail at 7
+2022-10-31 23:04:20,000 - basicLogger - ERROR - No more messages
+2022-10-31 23:04:20,001 - basicLogger - ERROR - could not find merch audit trail at 7
+2022-10-31 23:04:23,863 - basicLogger - INFO - retrieving merch audit trail at 5
+2022-10-31 23:04:31,044 - basicLogger - INFO - retrieving merch audit trail at 6
+2022-10-31 23:04:32,126 - basicLogger - ERROR - No more messages
+2022-10-31 23:04:32,126 - basicLogger - ERROR - could not find merch audit trail at 6
+2022-10-31 23:05:37,456 - basicLogger - INFO - retrieving food audit trail at 6
+2022-10-31 23:05:44,841 - basicLogger - INFO - retrieving food audit trail at 1
+2022-10-31 23:05:45,920 - basicLogger - ERROR - No more messages
+2022-10-31 23:05:45,921 - basicLogger - ERROR - could not find food audit trail at 1
+2022-10-31 23:05:50,258 - basicLogger - INFO - retrieving food audit trail at 2
+2022-10-31 23:05:51,338 - basicLogger - ERROR - No more messages
+2022-10-31 23:05:51,339 - basicLogger - ERROR - could not find food audit trail at 2
+2022-10-31 23:06:16,705 - basicLogger - INFO - retrieving food audit trail at 2
+2022-10-31 23:06:21,579 - basicLogger - INFO - retrieving food audit trail at 5
+2022-10-31 23:06:22,652 - basicLogger - ERROR - No more messages
+2022-10-31 23:06:22,652 - basicLogger - ERROR - could not find food audit trail at 5
+2022-10-31 23:06:34,041 - basicLogger - INFO - retrieving food audit trail at 2
+2022-10-31 23:06:37,919 - basicLogger - INFO - retrieving food audit trail at 3
+2022-10-31 23:06:39,003 - basicLogger - ERROR - No more messages
+2022-10-31 23:06:39,003 - basicLogger - ERROR - could not find food audit trail at 3
+2022-10-31 23:06:51,073 - basicLogger - INFO - retrieving food audit trail at 3
+2022-10-31 23:12:07,535 - basicLogger - INFO - retrieving food audit trail at 3
+2022-10-31 23:12:13,646 - basicLogger - INFO - retrieving food audit trail at 6
+2022-10-31 23:12:18,895 - basicLogger - INFO - retrieving food audit trail at 9
+2022-10-31 23:12:19,979 - basicLogger - ERROR - No more messages
+2022-10-31 23:12:19,980 - basicLogger - ERROR - could not find food audit trail at 9
+2022-10-31 23:12:28,050 - basicLogger - INFO - retrieving food audit trail at 4
+2022-11-09 20:36:07,189 - basicLogger - INFO - retrieving merch audit trail at 1

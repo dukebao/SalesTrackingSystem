@@ -1,7 +1,0 @@
-version: 1
-datastore:
-  user: root
-  password: Steven646!
-  hostname: localhost
-  port: 3306
-  db: inventory

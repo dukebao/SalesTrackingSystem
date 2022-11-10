@@ -1,0 +1,3 @@
+deployment/.env
+storage/storage_config.yml
+venv/*

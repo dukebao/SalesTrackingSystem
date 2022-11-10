@@ -3,10 +3,12 @@ storage_merch:
   url: http://127.0.0.1:8090/merch-inventory
 storage_food:
   url: http://127.0.0.1:8090/food-inventory
-kafka: # topic 
+check_merch:
+  url: http://127.0.0.1:8090/check_merch
+kafkaMerch:
   hostname: steven-kafka-apple-banana.eastus.cloudapp.azure.com
   port: 9092
-  topic: events
+  topic: kafkaAddMerch
 kafkaFood:
   hostname: steven-kafka-apple-banana.eastus.cloudapp.azure.com
   port: 9092
