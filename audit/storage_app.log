@@ -58,3 +58,4 @@
 2022-10-31 23:12:19,979 - basicLogger - ERROR - No more messages
 2022-10-31 23:12:19,980 - basicLogger - ERROR - could not find food audit trail at 9
 2022-10-31 23:12:28,050 - basicLogger - INFO - retrieving food audit trail at 4
+2022-11-09 20:36:07,189 - basicLogger - INFO - retrieving merch audit trail at 1

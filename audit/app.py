@@ -19,10 +19,10 @@ logger = logging.getLogger('basicLogger')
 def getAuditMerch(index):
     """Get audit trail for merch"""
     # ok
-    hostname = hostname = "%s:%d" % (app_config["kafka"]["hostname"],app_config["kafka"]["port"])
+    hostname = "%s:%d" % (app_config["kafka"]["hostname"],app_config["kafka"]["port"])
     client = KafkaClient(hosts=hostname)
     topic = client.topics[str.encode(app_config["kafka"]["topic"])]
-    
+    print(hostname)
     # here we reset the offset on the start so that we retrieve message 
     # from the beginning of the topic
     # to prevent the for loop from blocking, we set the timeout 
@@ -48,7 +48,7 @@ def getAuditMerch(index):
 def getAuditFood(index):
     """Get audit trail for food"""
     # ok
-    hostname = hostname = "%s:%d" % (app_config["kafka"]["hostname"],app_config["kafka"]["port"])
+    hostname = "%s:%d" % (app_config["kafka"]["hostname"],app_config["kafka"]["port"])
     client = KafkaClient(hosts=hostname)
     topic = client.topics[str.encode(app_config["kafka"]["topic"])]
     
