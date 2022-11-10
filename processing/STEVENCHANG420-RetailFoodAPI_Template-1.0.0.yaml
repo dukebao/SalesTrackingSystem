@@ -116,6 +116,28 @@ paths:
                 properties:
                   message:
                     type: string                
+  /stats:
+    get: 
+      summary: check the latest entries for food and merch table 
+      operationId: app.stats
+      responses: 
+        200: 
+          description: "content return from get request"
+          content:
+            application/json:
+              schema: 
+                type: object
+                items:
+                  $ref: '#/components/schemas/Stats'
+        400:
+          description: "invalid request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string     
 components:
   schemas:
     merchItem:
@@ -192,4 +214,6 @@ components:
         name_of_food:
           type: string
           example: Hulk Juice
+      type: object
+    Stats:
       type: object

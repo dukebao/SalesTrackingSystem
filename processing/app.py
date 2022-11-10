@@ -21,7 +21,7 @@ from flask import Flask, request, jsonify
 import apscheduler
 from apscheduler.schedulers.background import BackgroundScheduler
 import pytz
-
+from flask_cors import CORS, cross_origin
 
 TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 
@@ -224,12 +224,28 @@ def read_last_entry():
     session.close()
     return result_list
 
+def total_sales():
+    session = DB_SESSION()
+    sql_query = 'select sum(merchSales) as merchSales, sum(foodSales) as foodSales , max(merchSales) as MaxMerchSales, max(foodSales) as MaxFoodSales from SalesStats;'
+    result = session.execute(sql_query)
+    timestamp = datetime.datetime.now(tz=pytz.UTC)
+    for row in result:
+        result_object = {'merchSales':int(row[0]), 'foodSales':int(row[1]),'maxMerchSales':int(row[2]) ,'maxFoodSales':int(row[3]) ,'timestamp':timestamp}
+
+    session.close()
+    return result_object
+def stats():
+    content = total_sales()
+    print(content)
+    return content, 200
 
 app = connexion.FlaskApp(__name__, specification_dir='')
 app.add_api('STEVENCHANG420-RetailFoodAPI_Template-1.0.0.yaml',
             strict_validation=True,
             validate_responses=True)
+CORS(app.app)
+app.app.config['CORS_HEADERS'] = 'Content-Type'
 
 if __name__ == '__main__':
-    init_scheduler()
+    # init_scheduler()
     app.run(port=8100, use_reloader=False)
