@@ -7,6 +7,7 @@ import yaml
 import logging
 import logging.config
 from pykafka import KafkaClient
+from flask_cors import CORS, cross_origin
 
 with open('app_config.yml', 'r') as f:
     app_config = yaml.safe_load(f.read())
@@ -78,6 +79,7 @@ app = connexion.FlaskApp(__name__, specification_dir='')
 app.add_api('STEVENCHANG420-RetailFoodAPI_Template-1.0.0.yaml',
             strict_validation=True,
             validate_responses=True)
-
+CORS(app.app)
+app.app.config['CORS_HEADERS'] = 'Content-Type'
 if __name__ == '__main__':
     app.run(port=8110)
