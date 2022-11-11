@@ -63,3 +63,10 @@ services:
     depends_on:
       - "kafka"
       - "storage"
+  dashboard:
+    image: dashboard
+    ports:
+      - "3000:3000"
+    depends_on:
+      - "processing"
+      - "audit"
