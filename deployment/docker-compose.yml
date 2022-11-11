@@ -60,6 +60,7 @@ services:
     image: audit
     ports:
       - '8110:8110'
+    network_mode: "host"
     depends_on:
       - "kafka"
       - "storage"
