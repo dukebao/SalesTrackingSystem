@@ -8,3 +8,4 @@ mysql-connector-python==8.0.30
 PyMySQL==1.0.2
 APScheduler==3.9.1
 requests==2.28.1
+flask-cors==3.0.10
