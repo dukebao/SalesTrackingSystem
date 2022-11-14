@@ -5,15 +5,20 @@ export default function EndpointAudit(props) {
     const [isLoaded, setIsLoaded] = useState(false);
     const [log, setLog] = useState(null);
     const [error, setError] = useState(null)
-	const rand_val = Math.floor(Math.random() * 100); // Get a random event from the event store
+	let rand_val = Math.floor(Math.random() * 100); // Get a random event from the event store
+    const [index, setIndex] = useState(null);
 
     const getAudit = () => {
-        fetch(`http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8110/${props.endpoint}?index=${rand_val}`)
-            .then(res => res.json())
+        // fetch(`http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8110/${props.endpoint}?index=${rand_val}`)
+        fetch(`http://localhost:8110/${props.endpoint}?index=${rand_val}`)
+    
+        .then(res => res.json())
             .then((result)=>{
-				console.log("Received Audit Results for " + props.endpoint)
+                console.log(result)
+                setIndex(rand_val);
                 setLog(result);
-                setIsLoaded(true);
+                setIsLoaded(true)
+
             },(error) =>{
                 setError(error)
                 setIsLoaded(true);
@@ -32,9 +37,9 @@ export default function EndpointAudit(props) {
         
         return (
             <div>
-                <h3>{props.endpoint}-{rand_val}</h3>
-                {JSON.stringify(log)}
+            <h3>{props.endpoint}-{index}</h3>
+            {JSON.stringify(log)}
             </div>
-        )
+            )
     }
 }
