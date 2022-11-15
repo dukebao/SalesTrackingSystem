@@ -1,10 +1,10 @@
 datastore:
   filename: stats.sqlite
 scheduler:
-  period_sec: 20
-  start_time: 2022-11-15 08:23:25.749785+00:00
+  period_sec: 5
+  start_time: 2022-11-15 09:12:07.276326+00:00
 storage_food:
-  url: http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8090/food-stats
+  url: http://localhost:8090/food-stats
 storage_merch:
-  url: http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8090/merch-stats
+  url: http://localhost:8090/merch-stats
 version: 1
