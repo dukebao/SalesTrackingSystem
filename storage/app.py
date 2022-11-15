@@ -89,10 +89,10 @@ def add_to_database(body, table_name):
 #     return success_message
 
 def getMerchStats():
-    print(request.args['timestamp'])
-    timestamp = request.args['timestamp']
 
-    result = queryDbStats(timestamp, TABLE_NAME_OPTIONS[0])
+    starttime = request.args['starttime']
+    endtime = request.args['endtime']
+    result = queryDbStats(starttime, endtime , TABLE_NAME_OPTIONS[0])
     print(result)
     print('='*50)
     success_message = {
@@ -106,10 +106,9 @@ def getMerchStats():
     return success_message
 
 def getFoodStats():
-    print(request.args['timestamp'])
-    timestamp = request.args['timestamp']
-
-    result = queryDbStats(timestamp, TABLE_NAME_OPTIONS[1])
+    starttime = request.args['starttime']
+    endtime = request.args['endtime']
+    result = queryDbStats(starttime, endtime , TABLE_NAME_OPTIONS[1])
     success_message = {
         'message': 'food inventory stats',
         'status': 200,
@@ -117,11 +116,11 @@ def getFoodStats():
     }
     return success_message
 
-def queryDbStats(timestamp, table_name):
+def queryDbStats(starttime, endtime ,table_name):
     session = DB_SESSION()
     
     print(f'querying merch stats from database')
-    sql_query = 'SELECT * FROM inventory.%s WHERE date_added >= "%s"' % (table_name,timestamp)
+    sql_query = 'SELECT * FROM inventory.%s WHERE date_added >= "%s" AND date_added <= "%s"' % (table_name,starttime, endtime)
 
     result = session.execute(sql_query)
     session.close()

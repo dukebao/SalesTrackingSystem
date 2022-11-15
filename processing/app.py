@@ -86,49 +86,6 @@ def addfoodInventory(body):
         f'Food Storage Service : trace_id: {body["trace_id"]} write to database inventory table food_inventory')
     return success_message
 
-
-def getMerchStats():
-    print(request.args['timestamp'])
-    timestamp = request.args['timestamp']
-
-    result = queryDbStats(timestamp, TABLE_NAME_OPTIONS[0])
-    success_message = {
-        'message': 'merch inventory stats',
-        'status': 200,
-        'content': json.dumps(result)
-    }
-    return success_message
-
-
-def getFoodStats():
-    print(request.args['timestamp'])
-    timestamp = request.args['timestamp']
-
-    result = queryDbStats(timestamp, TABLE_NAME_OPTIONS[1])
-    success_message = {
-        'message': 'food inventory stats',
-        'status': 200,
-        'content': json.dumps(result)
-    }
-    return success_message
-
-
-def queryDbStats(timestamp, table_name):
-    session = DB_SESSION()
-
-    print(f'querying merch stats from database')
-    sql_query = 'SELECT * FROM inventory.%s WHERE date_added >= "%s"' % (
-        table_name, timestamp)
-    logger.debug(sql_query)
-    result = session.execute(sql_query)
-    session.close()
-    result_list = []
-    for row in result:
-        result_list.append({'SKU': row[0], 'merchPrice': row[1], 'merchQuantity': row[2],
-                           'merchName': row[3], 'date_added': str(row[4]), 'trace_id': row[5]})
-    return result_list
-
-
 def init_scheduler():
     sched = BackgroundScheduler(daemon=True)
     sched.add_job(populate_stats,
@@ -143,8 +100,15 @@ def populate_stats():
 
     current_time = datetime.datetime.now(tz=pytz.UTC)
     print(current_time)
-    test_time = '2022-09-06 23:33:45.594720'
-    status_code, data = get_food_inventory(current_time)
+    test_start_time = '2022-10-06 23:33:45.594720'
+    test_end_time = '2022-11-20 23:33:45.594720'
+    # status_code, data = get_food_inventory(test_start_time,test_end_time )
+    start_time = app_config['scheduler']['start_time']
+    end_time = current_time
+    print('='*50)
+    print(start_time, end_time)
+    print('='*50)
+    status_code, data = get_food_inventory(start_time,end_time )
     # status_code , data = get_food_inventory(test_time) # for testing
 
     if status_code == 200:
@@ -154,7 +118,7 @@ def populate_stats():
         logger.error(
             f'Request Failed ! ERROR : something happened when getting food stats')
 
-    status_code, data = get_merch_inventory(current_time)
+    status_code, data = get_merch_inventory(start_time,end_time)
     # status_code, data = get_merch_inventory(test_time) # for testing
     if status_code == 200:
         merch_sales = calculate_merch_sales(data)
@@ -167,21 +131,28 @@ def populate_stats():
             'trace_id': trace_id, 'timestamp': current_time}
     logger.debug(f'INFO: body: {body}')
     write_to_database(body)
+
+    # update start time 
+    app_config['scheduler']['start_time'] = current_time
+    with open('app_config.yml', 'w') as f:
+        yaml.dump(app_config, f)
+    logger.debug(f'INFO: updated start time: {current_time}')
+
     logger.debug(f'finish writting to database ,{body}')
     last_row = read_last_entry()
     logger.debug(f'last row in database: {last_row}')
     logger.info(f'INFO: finish populating stats')
 
 
-def get_food_inventory(current_time=datetime.datetime.now(tz=pytz.UTC)):
-    url = STORAGE_FOOD_URL + '?timestamp=' + str(current_time)
+def get_food_inventory(starttime=datetime.datetime.now(tz=pytz.UTC), endtime=datetime.datetime.now(tz=pytz.UTC)):
+    url = STORAGE_FOOD_URL + '?starttime=' + str(starttime) + '&endtime=' + str(endtime)
     response = requests.get(url)
     # if status code is okay
     return response.status_code, response.json()
 
 
-def get_merch_inventory(current_time=datetime.datetime.now(tz=pytz.UTC)):
-    url = STORAGE_MERCH_URL + '?timestamp=' + str(current_time)
+def get_merch_inventory(starttime=datetime.datetime.now(tz=pytz.UTC), endtime=datetime.datetime.now(tz=pytz.UTC)):
+    url = STORAGE_MERCH_URL + '?starttime=' + str(starttime) + '&endtime=' + str(endtime)
     response = requests.get(url)
     # if status code is okay
     return response.status_code, response.json()

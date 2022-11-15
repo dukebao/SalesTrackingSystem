@@ -1,9 +1,10 @@
-version: 1
 datastore:
   filename: stats.sqlite
 scheduler:
   period_sec: 5
-storage_merch:
-  url: http://localhost:8090/merch-stats
+  start_time: 2022-11-15 07:57:10.473893+00:00
 storage_food:
   url: http://localhost:8090/food-stats
+storage_merch:
+  url: http://localhost:8090/merch-stats
+version: 1

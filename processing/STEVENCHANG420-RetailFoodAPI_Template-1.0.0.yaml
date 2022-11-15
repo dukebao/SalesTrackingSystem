@@ -54,68 +54,6 @@ paths:
             schema:
               $ref: '#/components/schemas/foodItem'
         description: Inventory item to add
-  /merch-stats:
-    get:
-      summary: check merch inventory items 
-      operationId: app.getMerchStats
-      description: checks for entries that happens after the time specification 
-      parameters:
-        - name: timestamp
-          in: query
-          description: time of interest
-          schema:
-            type: string
-            format: date-time
-            example: '2022-02-45T09:12:33.001Z'
-      responses: 
-        200: 
-          description: "content return from get request"
-          content:
-            application/json:
-              schema: 
-                type: object
-                items:
-                  $ref: '#/components/schemas/merchStats'
-        400:
-          description: "invalid request"
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-  /food-stats:
-    get:
-      summary: check food inventory items 
-      operationId: app.getFoodStats
-      description: checks for entries that happens after the time specification 
-      parameters:
-        - name: timestamp
-          in: query
-          description: time of interest
-          schema:
-            type: string
-            format: date-time
-            example: '2022-02-45T09:12:33.001Z'
-      responses: 
-        200: 
-          description: "content return from get request"
-          content:
-            application/json:
-              schema: 
-                type: object
-                items:
-                  $ref: '#/components/schemas/foodStats'
-        400:
-          description: "invalid request"
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string                
   /stats:
     get: 
       summary: check the latest entries for food and merch table 

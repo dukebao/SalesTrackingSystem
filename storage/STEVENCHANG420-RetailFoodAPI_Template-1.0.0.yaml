@@ -60,7 +60,14 @@ paths:
       operationId: app.getMerchStats
       description: checks for entries that happens after the time specification 
       parameters:
-        - name: timestamp
+        - name: starttime
+          in: query
+          description: time of interest
+          schema:
+            type: string
+            format: date-time
+            example: '2022-02-45T09:12:33.001Z'
+        - name: endtime
           in: query
           description: time of interest
           schema:
@@ -91,7 +98,14 @@ paths:
       operationId: app.getFoodStats
       description: checks for entries that happens after the time specification 
       parameters:
-        - name: timestamp
+        - name: starttime
+          in: query
+          description: time of interest
+          schema:
+            type: string
+            format: date-time
+            example: '2022-02-45T09:12:33.001Z'
+        - name: endtime
           in: query
           description: time of interest
           schema:
