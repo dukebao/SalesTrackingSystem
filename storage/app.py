@@ -46,7 +46,7 @@ Base.metadata.bind = DB_ENGINE
 DB_SESSION = sessionmaker(bind=DB_ENGINE)
 
 
-KAFKA_CONNECTION_RETRY = 3
+KAFKA_CONNECTION_RETRY = 10
 
 def add_to_database(body, table_name):
     session = DB_SESSION()
