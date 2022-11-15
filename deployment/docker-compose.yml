@@ -55,13 +55,13 @@ services:
       - '8090:8090'
     depends_on:
       - "kafka"
-  processing:
-    image: processing
-    ports:
-      - '8100:8100'
-    network_mode: "host"
-    depends_on:
-      - "storage"
+  # processing:
+  #   image: processing
+  #   ports:
+  #     - '8100:8100'
+  #   network_mode: "host"
+  #   depends_on:
+  #     - "storage"
   audit:
     image: audit
     ports:
