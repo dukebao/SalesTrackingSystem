@@ -28,11 +28,10 @@ with open('storage_config.yml', 'r') as f:
 STORAGE_SETTING = storage_config['datastore'] # for local storage
 STORAGE_SETTING = storage_config['cloudstore'] # for cloud storage
 print(STORAGE_SETTING)
-
-
-
 with open('app_config.yml', 'r') as f:
     app_config = yaml.safe_load(f.read())
+
+logger = logging.getLogger('basicLogger')
 
 STORAGE_MERCH_URL = app_config['storage_merch']['url']
 STORAGE_FOOD_URL = app_config['storage_food']['url']
@@ -41,12 +40,13 @@ with open('storage_log_config.yml', 'r') as f:
     log_config = yaml.safe_load(f.read())
     logging.config.dictConfig(log_config)
 
-logger = logging.getLogger('basicLogger')
-
 DB_ENGINE = create_engine(
     f"mysql+pymysql://{STORAGE_SETTING['user']}:{STORAGE_SETTING['password']}@{STORAGE_SETTING['hostname']}:{STORAGE_SETTING['port']}/{STORAGE_SETTING['db']}")
 Base.metadata.bind = DB_ENGINE
 DB_SESSION = sessionmaker(bind=DB_ENGINE)
+
+
+KAFKA_CONNECTION_RETRY = 3
 
 def add_to_database(body, table_name):
     session = DB_SESSION()
@@ -137,6 +137,9 @@ def queryDbStats(starttime, endtime ,table_name):
 
 def process_message():
     hostname = "%s:%d" % (app_config["kafka"]["hostname"],app_config["kafka"]["port"])
+
+    # implement retry logic
+
     client = KafkaClient(hosts=hostname)
     topic = client.topics[str.encode(app_config["kafka"]["topic"])]
     # Create a consume on a consumer group, that only reads new messages
@@ -163,13 +166,38 @@ def process_message():
  
         consumer.commit_offsets()
 
+def kafka_connection_retry():
+    hostname = "%s:%d" % (app_config["kafka"]["hostname"],app_config["kafka"]["port"])
+    current_retry = 0 # for retrying kafka connection
+    while current_retry < KAFKA_CONNECTION_RETRY:
+        print('trying to connect to kafka')
+        try:
+            client = KafkaClient(hosts=hostname)
+            topic = client.topics[app_config["kafka"]["topic"]]
+            consumer = topic.get_simple_consumer(consumer_group=b'event_group',
+                auto_offset_reset=OffsetType.LATEST,
+                reset_offset_on_start=True,
+                consumer_timeout_ms=100)
+            break
+        except Exception as e:
+            logger.error("Error connecting to kafka %s" % e)
+            current_retry += 1
+    if current_retry == KAFKA_CONNECTION_RETRY:
+        logger.error("Failed to connect to kafka")
+        exit(1)
+    else:
+        logger.info("Connected to kafka !!!")
 app = connexion.FlaskApp(__name__, specification_dir='')
 app.add_api('STEVENCHANG420-RetailFoodAPI_Template-1.0.0.yaml',
             strict_validation=True,
             validate_responses=True)
 
+
+
 if __name__ == '__main__':
+    kafka_connection_retry()
     t1 = Thread(target=process_message)
     t1.setDaemon(True)
     t1.start()
+    
     app.run(port=8090)

@@ -18,7 +18,9 @@ import logging
 import uuid
 import logging.config
 from pykafka import KafkaClient
+from pykafka.common import OffsetType
 
+KAFKA_CONNECTION_RETRY = 3
 
 TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 MAX_VALUES_ALLOWED_IN_DB = 10
@@ -151,7 +153,27 @@ def getFoodAudit(index):
     logger.error("Could not find food at index %d" % index)
     return {"message": "Not Found"}, 404        
 
-
+def kafka_connection_retry():
+    hostname = "%s:%d" % (app_config["kafka"]["hostname"],app_config["kafka"]["port"])
+    current_retry = 0 # for retrying kafka connection
+    while current_retry < KAFKA_CONNECTION_RETRY:
+        print('trying to connect to kafka')
+        try:
+            client = KafkaClient(hosts=hostname)
+            topic = client.topics[app_config["kafka"]["topic"]]
+            consumer = topic.get_simple_consumer(consumer_group=b'event_group',
+                auto_offset_reset=OffsetType.LATEST,
+                reset_offset_on_start=True,
+                consumer_timeout_ms=100)
+            break
+        except Exception as e:
+            logger.error("Error connecting to kafka %s" % e)
+            current_retry += 1
+    if current_retry == KAFKA_CONNECTION_RETRY:
+        logger.error("Failed to connect to kafka")
+        exit(1)
+    else:
+        logger.info("Connected to kafka !!!")
 
 app = connexion.FlaskApp(__name__, specification_dir='')
 app.add_api('STEVENCHANG420-RetailFoodAPI_Template-1.0.0.yaml',
@@ -159,5 +181,5 @@ app.add_api('STEVENCHANG420-RetailFoodAPI_Template-1.0.0.yaml',
             validate_responses=True)
 
 if __name__ == '__main__':
-
+    kafka_connection_retry()
     app.run(port=8080)

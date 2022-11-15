@@ -9299,3 +9299,337 @@
 2022-11-14 23:57:15,514 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'b9af3ebc-c203-43e5-9e89-0e51351d9e86', 'timestamp': datetime.datetime(2022, 11, 15, 7, 57, 10, 473893, tzinfo=<UTC>)}
 2022-11-14 23:57:15,522 - basicLogger - DEBUG - last row in database: [('b9af3ebc-c203-43e5-9e89-0e51351d9e86', 0.0, 0.0, '2022-11-15 07:57:10.473893')]
 2022-11-14 23:57:15,523 - basicLogger - INFO - INFO: finish populating stats
+2022-11-14 23:59:49,521 - basicLogger - INFO - Populating stats
+2022-11-14 23:59:54,025 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting food stats
+2022-11-14 23:59:58,451 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting merch stats
+2022-11-14 23:59:59,519 - basicLogger - INFO - Populating stats
+2022-11-15 00:00:03,972 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting food stats
+2022-11-15 00:00:08,414 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting merch stats
+2022-11-15 00:00:09,527 - basicLogger - INFO - Populating stats
+2022-11-15 00:00:13,999 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting food stats
+2022-11-15 00:00:18,417 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting merch stats
+2022-11-15 00:00:19,530 - basicLogger - INFO - Populating stats
+2022-11-15 00:00:24,017 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting food stats
+2022-11-15 00:00:28,477 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting merch stats
+2022-11-15 00:00:29,522 - basicLogger - INFO - Populating stats
+2022-11-15 00:00:34,078 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting food stats
+2022-11-15 00:00:38,527 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting merch stats
+2022-11-15 00:00:39,521 - basicLogger - INFO - Populating stats
+2022-11-15 00:00:44,012 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting food stats
+2022-11-15 00:00:48,461 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting merch stats
+2022-11-15 00:00:49,537 - basicLogger - INFO - Populating stats
+2022-11-15 00:00:53,990 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting food stats
+2022-11-15 00:00:58,402 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting merch stats
+2022-11-15 00:00:59,536 - basicLogger - INFO - Populating stats
+2022-11-15 00:01:04,008 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting food stats
+2022-11-15 00:01:08,475 - basicLogger - ERROR - Request Failed ! ERROR : something happened when getting merch stats
+2022-11-15 00:01:09,523 - basicLogger - INFO - Populating stats
+2022-11-15 00:01:14,533 - basicLogger - INFO - Populating stats
+2022-11-15 00:01:19,528 - basicLogger - INFO - Populating stats
+2022-11-15 00:01:24,534 - basicLogger - INFO - Populating stats
+2022-11-15 00:01:29,519 - basicLogger - INFO - Populating stats
+2022-11-15 00:01:34,523 - basicLogger - INFO - Populating stats
+2022-11-15 00:01:37,596 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:01:39,890 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:01:39,890 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '77894aa6-8d01-43da-8d43-394d299a5a64', 'timestamp': datetime.datetime(2022, 11, 15, 8, 1, 34, 523019, tzinfo=<UTC>)}
+2022-11-15 00:01:39,907 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:01:34.523019+00:00
+2022-11-15 00:01:39,907 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '77894aa6-8d01-43da-8d43-394d299a5a64', 'timestamp': datetime.datetime(2022, 11, 15, 8, 1, 34, 523019, tzinfo=<UTC>)}
+2022-11-15 00:01:39,917 - basicLogger - DEBUG - last row in database: [('77894aa6-8d01-43da-8d43-394d299a5a64', 0.0, 0.0, '2022-11-15 08:01:34.523019')]
+2022-11-15 00:01:39,918 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:01:44,531 - basicLogger - INFO - Populating stats
+2022-11-15 00:01:46,776 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:01:49,020 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:01:49,021 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '8c3e5a03-e362-42d9-98d8-03a857534dbb', 'timestamp': datetime.datetime(2022, 11, 15, 8, 1, 44, 532417, tzinfo=<UTC>)}
+2022-11-15 00:01:49,030 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:01:44.532417+00:00
+2022-11-15 00:01:49,031 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '8c3e5a03-e362-42d9-98d8-03a857534dbb', 'timestamp': datetime.datetime(2022, 11, 15, 8, 1, 44, 532417, tzinfo=<UTC>)}
+2022-11-15 00:01:49,039 - basicLogger - DEBUG - last row in database: [('8c3e5a03-e362-42d9-98d8-03a857534dbb', 0.0, 0.0, '2022-11-15 08:01:44.532417')]
+2022-11-15 00:01:49,040 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:01:49,536 - basicLogger - INFO - Populating stats
+2022-11-15 00:01:51,794 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:01:54,032 - basicLogger - INFO - Request Success ! INFO: Merch sales: 18.99
+2022-11-15 00:01:54,033 - basicLogger - DEBUG - INFO: body: {'merchSales': 18.99, 'foodSales': 0, 'trace_id': '4062f13c-ce4c-48db-a06c-e78f22bb2e4a', 'timestamp': datetime.datetime(2022, 11, 15, 8, 1, 49, 537099, tzinfo=<UTC>)}
+2022-11-15 00:01:54,043 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:01:49.537099+00:00
+2022-11-15 00:01:54,044 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 18.99, 'foodSales': 0, 'trace_id': '4062f13c-ce4c-48db-a06c-e78f22bb2e4a', 'timestamp': datetime.datetime(2022, 11, 15, 8, 1, 49, 537099, tzinfo=<UTC>)}
+2022-11-15 00:01:54,052 - basicLogger - DEBUG - last row in database: [('4062f13c-ce4c-48db-a06c-e78f22bb2e4a', 18.99, 0.0, '2022-11-15 08:01:49.537099')]
+2022-11-15 00:01:54,053 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:01:54,524 - basicLogger - INFO - Populating stats
+2022-11-15 00:01:56,859 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:01:59,110 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:01:59,110 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '92dbe7e6-fda3-496d-ab9c-4b113aeb437f', 'timestamp': datetime.datetime(2022, 11, 15, 8, 1, 54, 524334, tzinfo=<UTC>)}
+2022-11-15 00:01:59,117 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:01:54.524334+00:00
+2022-11-15 00:01:59,118 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '92dbe7e6-fda3-496d-ab9c-4b113aeb437f', 'timestamp': datetime.datetime(2022, 11, 15, 8, 1, 54, 524334, tzinfo=<UTC>)}
+2022-11-15 00:01:59,129 - basicLogger - DEBUG - last row in database: [('92dbe7e6-fda3-496d-ab9c-4b113aeb437f', 0.0, 0.0, '2022-11-15 08:01:54.524334')]
+2022-11-15 00:01:59,129 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:01:59,530 - basicLogger - INFO - Populating stats
+2022-11-15 00:02:01,772 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:02:04,026 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:02:04,027 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'cc321520-f66c-49ce-b6e6-5ea30ba30ef7', 'timestamp': datetime.datetime(2022, 11, 15, 8, 1, 59, 531331, tzinfo=<UTC>)}
+2022-11-15 00:02:04,036 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:01:59.531331+00:00
+2022-11-15 00:02:04,037 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'cc321520-f66c-49ce-b6e6-5ea30ba30ef7', 'timestamp': datetime.datetime(2022, 11, 15, 8, 1, 59, 531331, tzinfo=<UTC>)}
+2022-11-15 00:02:04,045 - basicLogger - DEBUG - last row in database: [('cc321520-f66c-49ce-b6e6-5ea30ba30ef7', 0.0, 0.0, '2022-11-15 08:01:59.531331')]
+2022-11-15 00:02:04,046 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:02:04,534 - basicLogger - INFO - Populating stats
+2022-11-15 00:02:06,782 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:02:09,024 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:02:09,024 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'dcf6c837-cdb1-44ad-8b89-fda21139b505', 'timestamp': datetime.datetime(2022, 11, 15, 8, 2, 4, 534331, tzinfo=<UTC>)}
+2022-11-15 00:02:09,035 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:02:04.534331+00:00
+2022-11-15 00:02:09,035 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'dcf6c837-cdb1-44ad-8b89-fda21139b505', 'timestamp': datetime.datetime(2022, 11, 15, 8, 2, 4, 534331, tzinfo=<UTC>)}
+2022-11-15 00:02:09,044 - basicLogger - DEBUG - last row in database: [('dcf6c837-cdb1-44ad-8b89-fda21139b505', 0.0, 0.0, '2022-11-15 08:02:04.534331')]
+2022-11-15 00:02:09,045 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:02:09,518 - basicLogger - INFO - Populating stats
+2022-11-15 00:02:11,773 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:02:14,007 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:02:14,008 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'cca2d331-8f4c-4447-80e2-a67dbd42f9a2', 'timestamp': datetime.datetime(2022, 11, 15, 8, 2, 9, 518334, tzinfo=<UTC>)}
+2022-11-15 00:02:14,019 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:02:09.518334+00:00
+2022-11-15 00:02:14,019 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'cca2d331-8f4c-4447-80e2-a67dbd42f9a2', 'timestamp': datetime.datetime(2022, 11, 15, 8, 2, 9, 518334, tzinfo=<UTC>)}
+2022-11-15 00:02:14,027 - basicLogger - DEBUG - last row in database: [('cca2d331-8f4c-4447-80e2-a67dbd42f9a2', 0.0, 0.0, '2022-11-15 08:02:09.518334')]
+2022-11-15 00:02:14,028 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:16:47,667 - basicLogger - INFO - Populating stats
+2022-11-15 00:16:50,744 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:16:53,012 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:16:53,013 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '86887138-d688-4a50-ae7e-9afe905ee7c8', 'timestamp': datetime.datetime(2022, 11, 15, 8, 16, 47, 669346, tzinfo=<UTC>)}
+2022-11-15 00:16:53,028 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:16:47.669346+00:00
+2022-11-15 00:16:53,029 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '86887138-d688-4a50-ae7e-9afe905ee7c8', 'timestamp': datetime.datetime(2022, 11, 15, 8, 16, 47, 669346, tzinfo=<UTC>)}
+2022-11-15 00:16:53,037 - basicLogger - DEBUG - last row in database: [('86887138-d688-4a50-ae7e-9afe905ee7c8', 0.0, 0.0, '2022-11-15 08:16:47.669346')]
+2022-11-15 00:16:53,038 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:16:57,681 - basicLogger - INFO - Populating stats
+2022-11-15 00:20:50,746 - basicLogger - INFO - Populating stats
+2022-11-15 00:20:53,797 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:20:56,042 - basicLogger - INFO - Request Success ! INFO: Merch sales: 37.98
+2022-11-15 00:20:56,043 - basicLogger - DEBUG - INFO: body: {'merchSales': 37.98, 'foodSales': 0, 'trace_id': '47fe91af-f6ac-413b-bba7-8b90c5375553', 'timestamp': datetime.datetime(2022, 11, 15, 8, 20, 50, 747119, tzinfo=<UTC>)}
+2022-11-15 00:20:56,054 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:20:50.747119+00:00
+2022-11-15 00:20:56,055 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 37.98, 'foodSales': 0, 'trace_id': '47fe91af-f6ac-413b-bba7-8b90c5375553', 'timestamp': datetime.datetime(2022, 11, 15, 8, 20, 50, 747119, tzinfo=<UTC>)}
+2022-11-15 00:20:56,065 - basicLogger - DEBUG - last row in database: [('47fe91af-f6ac-413b-bba7-8b90c5375553', 37.98, 0.0, '2022-11-15 08:20:50.747119')]
+2022-11-15 00:20:56,066 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:00,757 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:02,996 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:05,243 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:21:05,244 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'a17338b6-23ec-4324-ab54-50a1a4b6c614', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 0, 758125, tzinfo=<UTC>)}
+2022-11-15 00:21:05,254 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:00.758125+00:00
+2022-11-15 00:21:05,255 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'a17338b6-23ec-4324-ab54-50a1a4b6c614', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 0, 758125, tzinfo=<UTC>)}
+2022-11-15 00:21:05,265 - basicLogger - DEBUG - last row in database: [('a17338b6-23ec-4324-ab54-50a1a4b6c614', 0.0, 0.0, '2022-11-15 08:21:00.758125')]
+2022-11-15 00:21:05,266 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:05,755 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:08,023 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:10,290 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:21:10,291 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '0b83fe41-56c1-43b1-89bf-669ee6feda3c', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 5, 756085, tzinfo=<UTC>)}
+2022-11-15 00:21:10,302 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:05.756085+00:00
+2022-11-15 00:21:10,303 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '0b83fe41-56c1-43b1-89bf-669ee6feda3c', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 5, 756085, tzinfo=<UTC>)}
+2022-11-15 00:21:10,310 - basicLogger - DEBUG - last row in database: [('0b83fe41-56c1-43b1-89bf-669ee6feda3c', 0.0, 0.0, '2022-11-15 08:21:05.756085')]
+2022-11-15 00:21:10,311 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:10,748 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:12,975 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:15,211 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:21:15,211 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'fc865d3c-e575-4b06-bd0e-8f06e065b39c', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 10, 749418, tzinfo=<UTC>)}
+2022-11-15 00:21:15,220 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:10.749418+00:00
+2022-11-15 00:21:15,221 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'fc865d3c-e575-4b06-bd0e-8f06e065b39c', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 10, 749418, tzinfo=<UTC>)}
+2022-11-15 00:21:15,229 - basicLogger - DEBUG - last row in database: [('fc865d3c-e575-4b06-bd0e-8f06e065b39c', 0.0, 0.0, '2022-11-15 08:21:10.749418')]
+2022-11-15 00:21:15,230 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:15,758 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:18,007 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:20,546 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:21:20,547 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '264d7ebe-2223-49e0-9f3e-bc0b6dd879d6', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 15, 759656, tzinfo=<UTC>)}
+2022-11-15 00:21:20,554 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:15.759656+00:00
+2022-11-15 00:21:20,555 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '264d7ebe-2223-49e0-9f3e-bc0b6dd879d6', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 15, 759656, tzinfo=<UTC>)}
+2022-11-15 00:21:20,562 - basicLogger - DEBUG - last row in database: [('264d7ebe-2223-49e0-9f3e-bc0b6dd879d6', 0.0, 0.0, '2022-11-15 08:21:15.759656')]
+2022-11-15 00:21:20,562 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:20,752 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:22,993 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:25,246 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:21:25,247 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '5663820a-1a5b-468c-bdd2-9eab3a019a22', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 20, 753886, tzinfo=<UTC>)}
+2022-11-15 00:21:25,258 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:20.753886+00:00
+2022-11-15 00:21:25,259 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '5663820a-1a5b-468c-bdd2-9eab3a019a22', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 20, 753886, tzinfo=<UTC>)}
+2022-11-15 00:21:25,267 - basicLogger - DEBUG - last row in database: [('5663820a-1a5b-468c-bdd2-9eab3a019a22', 0.0, 0.0, '2022-11-15 08:21:20.753886')]
+2022-11-15 00:21:25,268 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:25,761 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:28,011 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:30,259 - basicLogger - INFO - Request Success ! INFO: Merch sales: 18.99
+2022-11-15 00:21:30,259 - basicLogger - DEBUG - INFO: body: {'merchSales': 18.99, 'foodSales': 0, 'trace_id': '3c641179-84ef-4b6e-a756-0410746349e9', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 25, 762590, tzinfo=<UTC>)}
+2022-11-15 00:21:30,268 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:25.762590+00:00
+2022-11-15 00:21:30,269 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 18.99, 'foodSales': 0, 'trace_id': '3c641179-84ef-4b6e-a756-0410746349e9', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 25, 762590, tzinfo=<UTC>)}
+2022-11-15 00:21:30,276 - basicLogger - DEBUG - last row in database: [('3c641179-84ef-4b6e-a756-0410746349e9', 18.99, 0.0, '2022-11-15 08:21:25.762590')]
+2022-11-15 00:21:30,277 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:30,753 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:33,001 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:35,256 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:21:35,257 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '721cb6c7-5eae-4f40-9c8f-ca4009bb74ab', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 30, 754168, tzinfo=<UTC>)}
+2022-11-15 00:21:35,265 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:30.754168+00:00
+2022-11-15 00:21:35,267 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '721cb6c7-5eae-4f40-9c8f-ca4009bb74ab', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 30, 754168, tzinfo=<UTC>)}
+2022-11-15 00:21:35,275 - basicLogger - DEBUG - last row in database: [('721cb6c7-5eae-4f40-9c8f-ca4009bb74ab', 0.0, 0.0, '2022-11-15 08:21:30.754168')]
+2022-11-15 00:21:35,276 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:35,752 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:37,997 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:40,242 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:21:40,243 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '2f86d106-4614-4e95-8f44-a7b2036f8254', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 35, 753000, tzinfo=<UTC>)}
+2022-11-15 00:21:40,251 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:35.753000+00:00
+2022-11-15 00:21:40,251 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '2f86d106-4614-4e95-8f44-a7b2036f8254', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 35, 753000, tzinfo=<UTC>)}
+2022-11-15 00:21:40,258 - basicLogger - DEBUG - last row in database: [('2f86d106-4614-4e95-8f44-a7b2036f8254', 0.0, 0.0, '2022-11-15 08:21:35.753000')]
+2022-11-15 00:21:40,259 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:40,755 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:43,063 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:45,298 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:21:45,299 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'c45160a5-f5ff-4ca6-8b8e-7f67e664e605', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 40, 756714, tzinfo=<UTC>)}
+2022-11-15 00:21:45,311 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:40.756714+00:00
+2022-11-15 00:21:45,312 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'c45160a5-f5ff-4ca6-8b8e-7f67e664e605', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 40, 756714, tzinfo=<UTC>)}
+2022-11-15 00:21:45,318 - basicLogger - DEBUG - last row in database: [('c45160a5-f5ff-4ca6-8b8e-7f67e664e605', 0.0, 0.0, '2022-11-15 08:21:40.756714')]
+2022-11-15 00:21:45,319 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:45,754 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:48,000 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:50,249 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:21:50,249 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '21b06815-a234-410d-ac73-844bbefe2ae9', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 45, 755918, tzinfo=<UTC>)}
+2022-11-15 00:21:50,259 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:45.755918+00:00
+2022-11-15 00:21:50,259 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '21b06815-a234-410d-ac73-844bbefe2ae9', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 45, 755918, tzinfo=<UTC>)}
+2022-11-15 00:21:50,268 - basicLogger - DEBUG - last row in database: [('21b06815-a234-410d-ac73-844bbefe2ae9', 0.0, 0.0, '2022-11-15 08:21:45.755918')]
+2022-11-15 00:21:50,269 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:50,763 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:53,019 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:21:55,323 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:21:55,324 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '3d79c460-c197-4541-9e7d-9a03b9be022c', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 50, 764500, tzinfo=<UTC>)}
+2022-11-15 00:21:55,334 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:50.764500+00:00
+2022-11-15 00:21:55,335 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '3d79c460-c197-4541-9e7d-9a03b9be022c', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 50, 764500, tzinfo=<UTC>)}
+2022-11-15 00:21:55,341 - basicLogger - DEBUG - last row in database: [('3d79c460-c197-4541-9e7d-9a03b9be022c', 0.0, 0.0, '2022-11-15 08:21:50.764500')]
+2022-11-15 00:21:55,342 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:21:55,750 - basicLogger - INFO - Populating stats
+2022-11-15 00:21:58,001 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:00,265 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:00,266 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '8643c476-f856-4e64-ac78-e0b43a6480ee', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 55, 751321, tzinfo=<UTC>)}
+2022-11-15 00:22:00,276 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:21:55.751321+00:00
+2022-11-15 00:22:00,276 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '8643c476-f856-4e64-ac78-e0b43a6480ee', 'timestamp': datetime.datetime(2022, 11, 15, 8, 21, 55, 751321, tzinfo=<UTC>)}
+2022-11-15 00:22:00,285 - basicLogger - DEBUG - last row in database: [('8643c476-f856-4e64-ac78-e0b43a6480ee', 0.0, 0.0, '2022-11-15 08:21:55.751321')]
+2022-11-15 00:22:00,286 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:00,760 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:03,010 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:05,279 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:05,280 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'ca3335ca-80c8-4624-98ca-2cc9328e2bca', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 0, 761688, tzinfo=<UTC>)}
+2022-11-15 00:22:05,290 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:00.761688+00:00
+2022-11-15 00:22:05,290 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'ca3335ca-80c8-4624-98ca-2cc9328e2bca', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 0, 761688, tzinfo=<UTC>)}
+2022-11-15 00:22:05,298 - basicLogger - DEBUG - last row in database: [('ca3335ca-80c8-4624-98ca-2cc9328e2bca', 0.0, 0.0, '2022-11-15 08:22:00.761688')]
+2022-11-15 00:22:05,300 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:05,752 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:08,001 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:10,253 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:10,253 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'de288a0a-b69d-447b-be26-2d2b39219a7f', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 5, 753172, tzinfo=<UTC>)}
+2022-11-15 00:22:10,264 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:05.753172+00:00
+2022-11-15 00:22:10,264 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'de288a0a-b69d-447b-be26-2d2b39219a7f', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 5, 753172, tzinfo=<UTC>)}
+2022-11-15 00:22:10,271 - basicLogger - DEBUG - last row in database: [('de288a0a-b69d-447b-be26-2d2b39219a7f', 0.0, 0.0, '2022-11-15 08:22:05.753172')]
+2022-11-15 00:22:10,272 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:10,752 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:13,007 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:15,283 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:15,284 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '9ea6c560-5ddc-4a62-a9b5-88b12bb3e534', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 10, 753079, tzinfo=<UTC>)}
+2022-11-15 00:22:15,294 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:10.753079+00:00
+2022-11-15 00:22:15,295 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '9ea6c560-5ddc-4a62-a9b5-88b12bb3e534', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 10, 753079, tzinfo=<UTC>)}
+2022-11-15 00:22:15,302 - basicLogger - DEBUG - last row in database: [('9ea6c560-5ddc-4a62-a9b5-88b12bb3e534', 0.0, 0.0, '2022-11-15 08:22:10.753079')]
+2022-11-15 00:22:15,303 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:15,762 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:18,044 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:20,314 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:20,315 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'd3709250-d827-4198-b87a-f0bd61bbff1d', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 15, 763079, tzinfo=<UTC>)}
+2022-11-15 00:22:20,325 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:15.763079+00:00
+2022-11-15 00:22:20,326 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'd3709250-d827-4198-b87a-f0bd61bbff1d', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 15, 763079, tzinfo=<UTC>)}
+2022-11-15 00:22:20,334 - basicLogger - DEBUG - last row in database: [('d3709250-d827-4198-b87a-f0bd61bbff1d', 0.0, 0.0, '2022-11-15 08:22:15.763079')]
+2022-11-15 00:22:20,335 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:20,754 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:23,010 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:25,267 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:25,268 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '04949c74-0360-450c-941e-bc4150b5b309', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 20, 755224, tzinfo=<UTC>)}
+2022-11-15 00:22:25,277 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:20.755224+00:00
+2022-11-15 00:22:25,278 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '04949c74-0360-450c-941e-bc4150b5b309', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 20, 755224, tzinfo=<UTC>)}
+2022-11-15 00:22:25,285 - basicLogger - DEBUG - last row in database: [('04949c74-0360-450c-941e-bc4150b5b309', 0.0, 0.0, '2022-11-15 08:22:20.755224')]
+2022-11-15 00:22:25,286 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:25,749 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:27,991 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:30,231 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:30,233 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '7572de59-047c-4443-a07e-bd0678973898', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 25, 749863, tzinfo=<UTC>)}
+2022-11-15 00:22:30,243 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:25.749863+00:00
+2022-11-15 00:22:30,244 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '7572de59-047c-4443-a07e-bd0678973898', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 25, 749863, tzinfo=<UTC>)}
+2022-11-15 00:22:30,251 - basicLogger - DEBUG - last row in database: [('7572de59-047c-4443-a07e-bd0678973898', 0.0, 0.0, '2022-11-15 08:22:25.749863')]
+2022-11-15 00:22:30,252 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:30,751 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:33,020 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:35,950 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:35,951 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'e4f5e194-22e5-41d9-b1e8-9b8c782f1720', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 30, 751439, tzinfo=<UTC>)}
+2022-11-15 00:22:35,961 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:30.751439+00:00
+2022-11-15 00:22:35,961 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'e4f5e194-22e5-41d9-b1e8-9b8c782f1720', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 30, 751439, tzinfo=<UTC>)}
+2022-11-15 00:22:35,969 - basicLogger - DEBUG - last row in database: [('e4f5e194-22e5-41d9-b1e8-9b8c782f1720', 0.0, 0.0, '2022-11-15 08:22:30.751439')]
+2022-11-15 00:22:35,970 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:40,750 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:43,019 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:45,286 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:45,287 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '67b5fff0-36ee-4b18-b9bc-428cb674c3a5', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 40, 750593, tzinfo=<UTC>)}
+2022-11-15 00:22:45,297 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:40.750593+00:00
+2022-11-15 00:22:45,297 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '67b5fff0-36ee-4b18-b9bc-428cb674c3a5', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 40, 750593, tzinfo=<UTC>)}
+2022-11-15 00:22:45,305 - basicLogger - DEBUG - last row in database: [('67b5fff0-36ee-4b18-b9bc-428cb674c3a5', 0.0, 0.0, '2022-11-15 08:22:40.750593')]
+2022-11-15 00:22:45,306 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:45,763 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:48,013 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:50,269 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:50,270 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'c0255e84-551e-445c-ad0f-bd0164828cbf', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 45, 764153, tzinfo=<UTC>)}
+2022-11-15 00:22:50,279 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:45.764153+00:00
+2022-11-15 00:22:50,279 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'c0255e84-551e-445c-ad0f-bd0164828cbf', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 45, 764153, tzinfo=<UTC>)}
+2022-11-15 00:22:50,287 - basicLogger - DEBUG - last row in database: [('c0255e84-551e-445c-ad0f-bd0164828cbf', 0.0, 0.0, '2022-11-15 08:22:45.764153')]
+2022-11-15 00:22:50,288 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:50,764 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:53,015 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:22:55,267 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:22:55,268 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '832a1df7-e542-4e71-98cf-a39a9709c9ff', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 50, 765155, tzinfo=<UTC>)}
+2022-11-15 00:22:55,276 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:50.765155+00:00
+2022-11-15 00:22:55,277 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '832a1df7-e542-4e71-98cf-a39a9709c9ff', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 50, 765155, tzinfo=<UTC>)}
+2022-11-15 00:22:55,284 - basicLogger - DEBUG - last row in database: [('832a1df7-e542-4e71-98cf-a39a9709c9ff', 0.0, 0.0, '2022-11-15 08:22:50.765155')]
+2022-11-15 00:22:55,285 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:22:55,762 - basicLogger - INFO - Populating stats
+2022-11-15 00:22:58,053 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:23:00,313 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:23:00,314 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'aa3f9516-8fbc-42d9-82d4-435d59dca931', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 55, 763173, tzinfo=<UTC>)}
+2022-11-15 00:23:00,324 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:22:55.763173+00:00
+2022-11-15 00:23:00,325 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'aa3f9516-8fbc-42d9-82d4-435d59dca931', 'timestamp': datetime.datetime(2022, 11, 15, 8, 22, 55, 763173, tzinfo=<UTC>)}
+2022-11-15 00:23:00,334 - basicLogger - DEBUG - last row in database: [('aa3f9516-8fbc-42d9-82d4-435d59dca931', 0.0, 0.0, '2022-11-15 08:22:55.763173')]
+2022-11-15 00:23:00,335 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:23:00,751 - basicLogger - INFO - Populating stats
+2022-11-15 00:23:03,029 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:23:05,290 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:23:05,291 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '7fefee89-fb82-4347-9be9-84aaa65e4261', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 0, 752698, tzinfo=<UTC>)}
+2022-11-15 00:23:05,301 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:23:00.752698+00:00
+2022-11-15 00:23:05,301 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '7fefee89-fb82-4347-9be9-84aaa65e4261', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 0, 752698, tzinfo=<UTC>)}
+2022-11-15 00:23:05,308 - basicLogger - DEBUG - last row in database: [('7fefee89-fb82-4347-9be9-84aaa65e4261', 0.0, 0.0, '2022-11-15 08:23:00.752698')]
+2022-11-15 00:23:05,309 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:23:05,759 - basicLogger - INFO - Populating stats
+2022-11-15 00:23:08,007 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:23:10,263 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:23:10,264 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'c576eaa1-2d21-4d32-9085-916ab8dd1b65', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 5, 760214, tzinfo=<UTC>)}
+2022-11-15 00:23:10,273 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:23:05.760214+00:00
+2022-11-15 00:23:10,274 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'c576eaa1-2d21-4d32-9085-916ab8dd1b65', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 5, 760214, tzinfo=<UTC>)}
+2022-11-15 00:23:10,281 - basicLogger - DEBUG - last row in database: [('c576eaa1-2d21-4d32-9085-916ab8dd1b65', 0.0, 0.0, '2022-11-15 08:23:05.760214')]
+2022-11-15 00:23:10,282 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:23:10,749 - basicLogger - INFO - Populating stats
+2022-11-15 00:23:12,993 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:23:15,276 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:23:15,279 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '34942e30-671e-4fdb-a667-d4d071f601d5', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 10, 750762, tzinfo=<UTC>)}
+2022-11-15 00:23:15,287 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:23:10.750762+00:00
+2022-11-15 00:23:15,288 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '34942e30-671e-4fdb-a667-d4d071f601d5', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 10, 750762, tzinfo=<UTC>)}
+2022-11-15 00:23:15,300 - basicLogger - DEBUG - last row in database: [('34942e30-671e-4fdb-a667-d4d071f601d5', 0.0, 0.0, '2022-11-15 08:23:10.750762')]
+2022-11-15 00:23:15,300 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:23:15,756 - basicLogger - INFO - Populating stats
+2022-11-15 00:23:18,007 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:23:20,337 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:23:20,338 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '1e060d86-1923-4fe3-88a5-5727eefcdfd1', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 15, 756646, tzinfo=<UTC>)}
+2022-11-15 00:23:20,347 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:23:15.756646+00:00
+2022-11-15 00:23:20,348 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '1e060d86-1923-4fe3-88a5-5727eefcdfd1', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 15, 756646, tzinfo=<UTC>)}
+2022-11-15 00:23:20,357 - basicLogger - DEBUG - last row in database: [('1e060d86-1923-4fe3-88a5-5727eefcdfd1', 0.0, 0.0, '2022-11-15 08:23:15.756646')]
+2022-11-15 00:23:20,358 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:23:20,741 - basicLogger - INFO - Populating stats
+2022-11-15 00:23:22,995 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:23:25,247 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:23:25,248 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'f7aa3c1e-a48e-42e0-a414-606cf5411f75', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 20, 741643, tzinfo=<UTC>)}
+2022-11-15 00:23:25,259 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:23:20.741643+00:00
+2022-11-15 00:23:25,260 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'f7aa3c1e-a48e-42e0-a414-606cf5411f75', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 20, 741643, tzinfo=<UTC>)}
+2022-11-15 00:23:25,269 - basicLogger - DEBUG - last row in database: [('f7aa3c1e-a48e-42e0-a414-606cf5411f75', 0.0, 0.0, '2022-11-15 08:23:20.741643')]
+2022-11-15 00:23:25,270 - basicLogger - INFO - INFO: finish populating stats
+2022-11-15 00:23:25,748 - basicLogger - INFO - Populating stats
+2022-11-15 00:23:27,986 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-15 00:23:30,256 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-15 00:23:30,257 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': 'f80cfe62-61c7-4c50-b4e8-6a94b98764e3', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 25, 749785, tzinfo=<UTC>)}
+2022-11-15 00:23:30,264 - basicLogger - DEBUG - INFO: updated start time: 2022-11-15 08:23:25.749785+00:00
+2022-11-15 00:23:30,265 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'f80cfe62-61c7-4c50-b4e8-6a94b98764e3', 'timestamp': datetime.datetime(2022, 11, 15, 8, 23, 25, 749785, tzinfo=<UTC>)}
+2022-11-15 00:23:30,272 - basicLogger - DEBUG - last row in database: [('f80cfe62-61c7-4c50-b4e8-6a94b98764e3', 0.0, 0.0, '2022-11-15 08:23:25.749785')]
+2022-11-15 00:23:30,273 - basicLogger - INFO - INFO: finish populating stats

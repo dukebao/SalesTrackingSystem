@@ -101,3 +101,17 @@
 2022-11-10 05:32:08,516 - basicLogger - INFO - Message: {'type': 'merch inventory', 'datetime': '2022-11-10T05:32:08', 'payload': {'SKU': 'SC12456', 'merchPrice': 18.99, 'merchQuantity': 1, 'merchName': 'Iron Man Cup', 'trace_id': '5e9bf89b-3b04-4bbd-8f44-a31ebe57b02e'}}
 2022-11-14 12:48:48,987 - basicLogger - INFO - Message: {'type': 'merch inventory', 'datetime': '2022-11-14T12:48:48', 'payload': {'SKU': 'SC12456', 'merchName': 'Chris Man Cup', 'merchPrice': 90.99, 'merchQuantity': 666, 'trace_id': 'a50d49e9-5ac0-4a8b-9553-d40a93e436cf'}}
 2022-11-14 12:56:22,004 - basicLogger - INFO - Message: {'type': 'merch inventory', 'datetime': '2022-11-14T12:56:21', 'payload': {'SKU': 'INDEX2', 'merchPrice': 18.99, 'merchQuantity': 1, 'merchName': 'Iron Man Cup', 'trace_id': 'c53acf0d-65e6-4796-8170-2db3693c1a6f'}}
+2022-11-15 00:01:48,559 - basicLogger - INFO - Message: {'type': 'merch inventory', 'datetime': '2022-11-15T00:01:48', 'payload': {'SKU': 'INDEX3', 'merchPrice': 18.99, 'merchQuantity': 1, 'merchName': 'Iron Man Cup', 'trace_id': 'ed1afecb-3d2b-44b0-a62e-fba6e5b3569e'}}
+2022-11-15 00:13:21,874 - basicLogger - ERROR - Error connecting to kafka Unable to connect to a broker to fetch metadata. See logs.
+2022-11-15 00:14:10,611 - basicLogger - ERROR - Error connecting to kafka Unable to connect to a broker to fetch metadata. See logs.
+2022-11-15 00:14:35,095 - basicLogger - ERROR - Error connecting to kafka Unable to connect to a broker to fetch metadata. See logs.
+2022-11-15 00:14:59,509 - basicLogger - ERROR - Error connecting to kafka Unable to connect to a broker to fetch metadata. See logs.
+2022-11-15 00:14:59,510 - basicLogger - ERROR - Failed to connect to kafka
+2022-11-15 00:15:18,829 - basicLogger - ERROR - Error connecting to kafka 'consumer_group'
+2022-11-15 00:15:19,228 - basicLogger - ERROR - Error connecting to kafka 'consumer_group'
+2022-11-15 00:15:19,632 - basicLogger - ERROR - Error connecting to kafka 'consumer_group'
+2022-11-15 00:15:19,634 - basicLogger - ERROR - Failed to connect to kafka
+2022-11-15 00:20:09,705 - basicLogger - INFO - Connected to kafka !!!
+2022-11-15 00:20:31,041 - basicLogger - INFO - Message: {'type': 'merch inventory', 'datetime': '2022-11-15T00:20:30', 'payload': {'SKU': 'INDEX3', 'merchPrice': 18.99, 'merchQuantity': 1, 'merchName': 'Iron Man Cup', 'trace_id': 'de7a1ac5-484d-43f6-adfe-1e92468799d2'}}
+2022-11-15 00:20:37,641 - basicLogger - INFO - Message: {'type': 'merch inventory', 'datetime': '2022-11-15T00:20:37', 'payload': {'SKU': 'INDEX3', 'merchPrice': 18.99, 'merchQuantity': 1, 'merchName': 'Iron Man Cup', 'trace_id': '33f1692e-256c-4f4f-9c05-ee8b7462e9aa'}}
+2022-11-15 00:21:21,217 - basicLogger - INFO - Message: {'type': 'merch inventory', 'datetime': '2022-11-15T00:21:21', 'payload': {'SKU': 'INDEX3', 'merchPrice': 18.99, 'merchQuantity': 1, 'merchName': 'Iron Man Cup', 'trace_id': '87f5cc85-dcab-40a6-b030-89a23d222b0e'}}

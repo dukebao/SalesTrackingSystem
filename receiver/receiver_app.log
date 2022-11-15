@@ -126,3 +126,8 @@
 2022-11-14 12:48:48,964 - basicLogger - INFO - Merch Receiver Service : trace_id: a50d49e9-5ac0-4a8b-9553-d40a93e436cf status code 201
 2022-11-14 12:56:22,003 - basicLogger - INFO - Merch Receiver Service : trace_id: c53acf0d-65e6-4796-8170-2db3693c1a6f status code 201
 2022-11-14 12:56:37,445 - basicLogger - INFO - Merch Receiver Service : trace_id: 0a42a4f5-0d4a-4e77-ac23-f574efa34928 status code 201
+2022-11-15 00:01:48,537 - basicLogger - INFO - Merch Receiver Service : trace_id: ed1afecb-3d2b-44b0-a62e-fba6e5b3569e status code 201
+2022-11-15 00:20:31,032 - basicLogger - INFO - Merch Receiver Service : trace_id: de7a1ac5-484d-43f6-adfe-1e92468799d2 status code 201
+2022-11-15 00:20:37,553 - basicLogger - INFO - Merch Receiver Service : trace_id: 33f1692e-256c-4f4f-9c05-ee8b7462e9aa status code 201
+2022-11-15 00:21:21,214 - basicLogger - INFO - Merch Receiver Service : trace_id: 87f5cc85-dcab-40a6-b030-89a23d222b0e status code 201
+2022-11-15 00:25:33,816 - basicLogger - INFO - Connected to kafka !!!
