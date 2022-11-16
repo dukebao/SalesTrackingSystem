@@ -2,20 +2,14 @@ import connexion
 from connexion import NoContent
 import json
 import datetime
-import swagger_ui_bundle
 import connexion
 from connexion import NoContent
 import json
 import swagger_ui_bundle
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
 import requests
 import yaml
 import logging
-import uuid
 import logging.config
-from pykafka import KafkaClient
-from pykafka.common import OffsetType
 from multiprocessing import Pool
 import pytz
 
