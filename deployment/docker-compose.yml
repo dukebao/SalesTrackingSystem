@@ -82,4 +82,6 @@ services:
     image: healthcheck
     ports:
       - '8120:8120'
+    expose:
+      - '8120'
     network_mode: "host"
