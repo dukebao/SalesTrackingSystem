@@ -5,10 +5,10 @@ storage_food:
   url: http://127.0.0.1:8090/food-inventory
 
 services:
-  receiverStats: localhost:8080/health
-  storageStats: localhost:8090/health
-  processingStats: localhost:8100/health
-  auditStats: localhost:8110/health
+  receiverStats: http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8080/health
+  storageStats:  http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8090/health
+  processingStats:  http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8100/health
+  auditStats:  http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8110/health
 
 
 kafka: # topic 

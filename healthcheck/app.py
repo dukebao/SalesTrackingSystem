@@ -29,13 +29,15 @@ logger = logging.getLogger('basicLogger')
 
 def serviceHealthCeck(serviceobject):
     url = app_config['services'][serviceobject]
+    print(url)
     try:
         r = requests.get(url, timeout=5)
+        print(r)
         if r.status_code == 200:
             return {serviceobject: "UP"}
         else:
             return {serviceobject: "DOWN"}
-    except:
+    except requests.exceptions.RequestException as e:
         return {serviceobject: "DOWN"}
 
 def writetojson(dict):
