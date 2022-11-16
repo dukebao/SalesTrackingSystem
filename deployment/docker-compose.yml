@@ -55,6 +55,7 @@ services:
       - '8090:8090'
     depends_on:
       - "kafka"
+    network_mode: "host"
   processing:
     image: processing
     ports:
