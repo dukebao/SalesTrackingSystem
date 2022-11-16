@@ -20,7 +20,7 @@ import logging.config
 from pykafka import KafkaClient
 from pykafka.common import OffsetType
 
-KAFKA_CONNECTION_RETRY = 3
+KAFKA_CONNECTION_RETRY = 10
 
 TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 MAX_VALUES_ALLOWED_IN_DB = 10
@@ -174,6 +174,9 @@ def kafka_connection_retry():
         exit(1)
     else:
         logger.info("Connected to kafka !!!")
+
+def health():
+    return {"status": "ok"}, 200
 
 app = connexion.FlaskApp(__name__, specification_dir='')
 app.add_api('STEVENCHANG420-RetailFoodAPI_Template-1.0.0.yaml',

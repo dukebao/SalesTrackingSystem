@@ -115,3 +115,6 @@
 2022-11-15 00:20:31,041 - basicLogger - INFO - Message: {'type': 'merch inventory', 'datetime': '2022-11-15T00:20:30', 'payload': {'SKU': 'INDEX3', 'merchPrice': 18.99, 'merchQuantity': 1, 'merchName': 'Iron Man Cup', 'trace_id': 'de7a1ac5-484d-43f6-adfe-1e92468799d2'}}
 2022-11-15 00:20:37,641 - basicLogger - INFO - Message: {'type': 'merch inventory', 'datetime': '2022-11-15T00:20:37', 'payload': {'SKU': 'INDEX3', 'merchPrice': 18.99, 'merchQuantity': 1, 'merchName': 'Iron Man Cup', 'trace_id': '33f1692e-256c-4f4f-9c05-ee8b7462e9aa'}}
 2022-11-15 00:21:21,217 - basicLogger - INFO - Message: {'type': 'merch inventory', 'datetime': '2022-11-15T00:21:21', 'payload': {'SKU': 'INDEX3', 'merchPrice': 18.99, 'merchQuantity': 1, 'merchName': 'Iron Man Cup', 'trace_id': '87f5cc85-dcab-40a6-b030-89a23d222b0e'}}
+2022-11-15 00:56:37,213 - basicLogger - INFO - Connected to kafka !!!
+2022-11-15 01:10:40,802 - basicLogger - INFO - Connected to kafka !!!
+2022-11-15 23:43:53,190 - basicLogger - INFO - Connected to kafka !!!

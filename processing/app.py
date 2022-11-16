@@ -41,6 +41,8 @@ DB_ENGINE = create_engine("sqlite:///processing_storage.sqlite")
 Base.metadata.bind = DB_ENGINE
 DB_SESSION = sessionmaker(bind=DB_ENGINE)
 
+def health():
+    return {"status": "ok"}, 200
 
 def add_to_database(body, table_name):
     session = DB_SESSION()

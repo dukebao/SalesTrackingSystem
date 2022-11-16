@@ -66,27 +66,8 @@ def add_to_database(body, table_name):
     session.commit()
     session.close()
 
-# function to handle endpoint
-# def addmerchInventory(body):
-#     print(request.json)
-#     body = request.json
-
-#     add_to_database(body, TABLE_NAME_OPTIONS[0])
-
-#     success_message = {'message': 'merch inventory added',
-#                        'status': 201, 'content': request.json}
-#     logger.info(f'Merch Storage Service : trace_id: {body["trace_id"]} write to database inventory table merch_inventory')
-#     return success_message
-
-
-# def addfoodInventory(body):
-#     print(request.json)
-#     body = request.json
-#     add_to_database(body, TABLE_NAME_OPTIONS[1])
-#     success_message = {'message': 'food inventory added',
-#                        'status': 201, 'content': request.json}
-#     logger.info(f'Food Storage Service : trace_id: {body["trace_id"]} write to database inventory table food_inventory')
-#     return success_message
+def health():
+    return {"status": "ok"}, 200
 
 def getMerchStats():
 

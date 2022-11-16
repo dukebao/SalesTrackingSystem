@@ -17,6 +17,9 @@ with open('audit_log_config.yml', 'r') as f:
     logging.config.dictConfig(log_config)
 logger = logging.getLogger('basicLogger')
 
+def health():
+    return {"status": "ok"}, 200
+
 def getAuditMerch(index):
     """Get audit trail for merch"""
     # ok

@@ -1,0 +1,21 @@
+version: 1
+storage_merch:
+  url: http://127.0.0.1:8090/merch-inventory
+storage_food:
+  url: http://127.0.0.1:8090/food-inventory
+
+services:
+  receiverStats: steven-kafka-apple-banana.eastus.cloudapp.azure.com:8080/health
+  storageStats: steven-kafka-apple-banana.eastus.cloudapp.azure.com:8090/health
+  processingStats: steven-kafka-apple-banana.eastus.cloudapp.azure.com:8100/health
+  auditStats: steven-kafka-apple-banana.eastus.cloudapp.azure.com:8110/health
+
+
+kafka: # topic 
+  hostname: steven-kafka-apple-banana.eastus.cloudapp.azure.com
+  port: 9092
+  topic: events
+kafkaFood:
+  hostname: steven-kafka-apple-banana.eastus.cloudapp.azure.com
+  port: 9092
+  topic: kafkaAddFood

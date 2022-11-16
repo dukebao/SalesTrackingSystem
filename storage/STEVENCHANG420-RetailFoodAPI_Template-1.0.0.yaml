@@ -17,43 +17,14 @@ tags:
   - name : staff
     description: Operations available for internal staff ( private and require authentication)
 paths:
-  # /merch-inventory:
-  #   post:
-  #     tags:
-  #       - admins
-  #       - staff
-  #     summary: adds an inventory item
-  #     operationId: app.addmerchInventory
-  #     description: Adds an item to the system
-  #     responses:
-  #       '201':
-  #         description: item created
-  #       '400':
-  #         description: 'invalid input, object invalid'
-  #     requestBody:
-  #       content:
-  #         application/json:
-  #           schema:
-  #             $ref: '#/components/schemas/merchItem'
-  #       description: Inventory item to add
-  # /food-inventory:
-  #   post:
-  #     tags:
-  #       - admins
-  #     summary: adds an inventory item
-  #     operationId: app.addfoodInventory
-  #     description: Adds an item to the system
-  #     responses:
-  #       '201':
-  #         description: item created
-  #       '400':
-  #         description: 'invalid input, object invalid'
-  #     requestBody:
-  #       content:
-  #         application/json:
-  #           schema:
-  #             $ref: '#/components/schemas/foodItem'
-  #       description: Inventory item to add
+  /health:
+      get:
+        summary: health check endpoint 
+        operationId: app.health
+        description: always returns 200
+        responses:
+          200:
+            description: endpoint is healthy
   /merch-stats:
     get:
       summary: check merch inventory items 

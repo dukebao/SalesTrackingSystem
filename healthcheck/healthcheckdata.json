@@ -1,0 +1,23 @@
+[
+    {
+        "Last Update": "2022-11-16 08:02:11",
+        "receiverStats": "UP",
+        "storageStats": "UP",
+        "processingStats": "UP",
+        "auditStats": "UP"
+    },
+    {
+        "Last Update": "2022-11-16 08:02:17",
+        "receiverStats": "UP",
+        "storageStats": "UP",
+        "processingStats": "UP",
+        "auditStats": "UP"
+    },
+    {
+        "Last Update": "2022-11-16 08:02:32",
+        "receiverStats": "UP",
+        "storageStats": "UP",
+        "processingStats": "UP",
+        "auditStats": "UP"
+    }
+]

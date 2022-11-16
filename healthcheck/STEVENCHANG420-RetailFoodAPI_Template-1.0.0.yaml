@@ -1,0 +1,74 @@
+openapi: 3.0.0
+servers: 
+  - url: 'http://localhost:8120'
+info:
+  description: This is retail API 
+  version: version1
+  title: Somechain Retail Inventory API - health check
+  contact:
+    email: steven.chang420@gmail.com
+tags:
+  - name: admins
+    description: Secured Admin-only calls
+  - name: developers
+    description: Operations available to regular developers
+  - name : customer
+    description: Operations available to public customers ( public route )
+  - name : staff
+    description: Operations available for internal staff ( private and require authentication)
+paths:
+  /healthcheck:
+    get:
+      summary: perform health check for all the routes 
+      operationId: app.healthcheck
+      description: Perform health check for storage, receiver, processing and audit 
+      responses: 
+        200: 
+          description: successfully return helath check data
+          content:
+            application/json:
+              schema: 
+                type: object
+                items:
+                  $ref: '#/components/schemas/healthCheckSummary'
+        400:
+          description: "invalid request"
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+        
+        404:
+          description: Not Found
+          content:
+            application/json:
+              schema: 
+                type: object 
+                properties:
+                  message:
+                    type: string 
+
+components:
+  schemas:
+    healthCheckSummary:
+      required:
+        - receiverStats
+        - storageStats
+        - processingStats
+        - auditStats
+      properties:
+        receiverStats:
+          type: string
+          example: Running
+        storageStats:
+          type: string
+          example: Down
+        processingStats:
+          type: string
+          example: Running
+        auditStats:
+          type: string
+          example: Down
