@@ -77,16 +77,9 @@ services:
     depends_on:
       - "processing"
       - "audit"
+  
   healthcheck:
     image: healthcheck
     ports:
-      - "8120:8120"
-    depends_on:
-      - "kafka"
-      - "db"
-      - "receiver"
-      - "storage"
-      - "processing"
-      - "audit"
-      - "dashboard"
+      - '8120:8120'
     network_mode: "host"
