@@ -28,8 +28,8 @@ TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 
 if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
     print("In Test Environment")
-    app_conf_file = "/config/processing/app_config.yml"
-    log_conf_file = "/config/processing/processing_log_config.yml"
+    app_conf_file = "/config/app_config.yml"
+    log_conf_file = "/config/processing_log_config.yml"
 else:
     print("In Dev Environment")
     app_conf_file = "app_config.yml"
