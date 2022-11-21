@@ -101,7 +101,7 @@ services:
       - /home/azureuser/logs/audit:/logs
   dashboard:
     container_name: dashboard
-    build: ../dashboard/
+    build: ../dashboard-ui/
     image: dashboard
     ports:
       - "3000:3000"
