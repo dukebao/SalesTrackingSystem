@@ -22,20 +22,42 @@ import apscheduler
 from apscheduler.schedulers.background import BackgroundScheduler
 import pytz
 from flask_cors import CORS, cross_origin
+import os 
 
 TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 
-with open('app_config.yml', 'r') as f:
+if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
+    print("In Test Environment")
+    app_conf_file = "/config/processing/app_config.yml"
+    log_conf_file = "/config/processing/processing_log_config.yml"
+else:
+    print("In Dev Environment")
+    app_conf_file = "app_config.yml"
+    log_conf_file = "processing_log_config.yml"
+with open(app_conf_file, 'r') as f:
     app_config = yaml.safe_load(f.read())
+# External Logging Configuration
+with open(log_conf_file, 'r') as f:
+    log_config = yaml.safe_load(f.read())
+    logging.config.dictConfig(log_config)
+    logger = logging.getLogger('basicLogger')
+    logger.info("App Conf File: %s" % app_conf_file)
+    logger.info("Log Conf File: %s" % log_conf_file)
+
+# with open('app_config.yml', 'r') as f:
+#     app_config = yaml.safe_load(f.read())
+# with open('processing_log_config.yml', 'r') as f:
+#     log_config = yaml.safe_load(f.read())
+#     logging.config.dictConfig(log_config)
+#     logger = logging.getLogger('basicLogger')
+
+
+
 
 STORAGE_MERCH_URL = app_config['storage_merch']['url']
 STORAGE_FOOD_URL = app_config['storage_food']['url']
 
-with open('processing_log_config.yml', 'r') as f:
-    log_config = yaml.safe_load(f.read())
-    logging.config.dictConfig(log_config)
 
-logger = logging.getLogger('basicLogger')
 
 DB_ENGINE = create_engine("sqlite:///processing_storage.sqlite")
 Base.metadata.bind = DB_ENGINE

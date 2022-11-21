@@ -19,6 +19,8 @@ import uuid
 import logging.config
 from pykafka import KafkaClient
 from pykafka.common import OffsetType
+import os 
+
 
 KAFKA_CONNECTION_RETRY = 10
 
@@ -26,17 +28,37 @@ TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 MAX_VALUES_ALLOWED_IN_DB = 10
 EVENT_FILE_OUT = 'data.json'
 
-with open('app_config.yml', 'r') as f:
+if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
+    print("In Test Environment")
+    app_conf_file = "/config/receiver/app_config.yml"
+    log_conf_file = "/config/receiver/receiver_log_config.yml"
+else:
+    print("In Dev Environment")
+    app_conf_file = "app_config.yml"
+    log_conf_file = "receiver_log_config.yml"
+with open(app_conf_file, 'r') as f:
     app_config = yaml.safe_load(f.read())
+# External Logging Configuration
+with open(log_conf_file, 'r') as f:
+    log_config = yaml.safe_load(f.read())
+    logging.config.dictConfig(log_config)
+    logger = logging.getLogger('basicLogger')
+    logger.info("App Conf File: %s" % app_conf_file)
+    logger.info("Log Conf File: %s" % log_conf_file)
+
+# with open('receiver_log_config.yml', 'r') as f:
+#     log_config = yaml.safe_load(f.read())
+#     logging.config.dictConfig(log_config)
+#     logger = logging.getLogger('basicLogger')
+# with open('app_config.yml', 'r') as f:
+#     app_config = yaml.safe_load(f.read())
 
 STORAGE_MERCH_URL = app_config['storage_merch']['url']
 STORAGE_FOOD_URL = app_config['storage_food']['url']
 
-with open('receiver_log_config.yml', 'r') as f:
-    log_config = yaml.safe_load(f.read())
-    logging.config.dictConfig(log_config)
 
-logger = logging.getLogger('basicLogger')
+
+
 
 
 def write_to_json(timestamp, body):

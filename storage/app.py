@@ -20,25 +20,43 @@ from flask import Flask, request, jsonify
 from pykafka import KafkaClient
 from pykafka.common import OffsetType
 from threading import Thread
+import os
 
 TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
+
+if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
+    print("In Test Environment")
+    app_conf_file = "/config/storage/app_config.yml"
+    log_conf_file = "/config/storage/storage_log_config.yml"
+else:
+    print("In Dev Environment")
+    app_conf_file = "app_config.yml"
+    log_conf_file = "storage_log_config.yml"
+with open(app_conf_file, 'r') as f:
+    app_config = yaml.safe_load(f.read())
+# External Logging Configuration
+with open(log_conf_file, 'r') as f:
+    log_config = yaml.safe_load(f.read())
+    logging.config.dictConfig(log_config)
+    logger = logging.getLogger('basicLogger')
+    logger.info("App Conf File: %s" % app_conf_file)
+    logger.info("Log Conf File: %s" % log_conf_file)
+
+# with open('app_config.yml', 'r') as f:
+#     app_config = yaml.safe_load(f.read())
+# with open('storage_log_config.yml', 'r') as f:
+#     log_config = yaml.safe_load(f.read())
+#     logging.config.dictConfig(log_config)
+#     logger = logging.getLogger('basicLogger')
 
 with open('storage_config.yml', 'r') as f:
     storage_config = yaml.safe_load(f.read())
 STORAGE_SETTING = storage_config['datastore'] # for local storage
 STORAGE_SETTING = storage_config['cloudstore'] # for cloud storage
 print(STORAGE_SETTING)
-with open('app_config.yml', 'r') as f:
-    app_config = yaml.safe_load(f.read())
-
-logger = logging.getLogger('basicLogger')
 
 STORAGE_MERCH_URL = app_config['storage_merch']['url']
 STORAGE_FOOD_URL = app_config['storage_food']['url']
-
-with open('storage_log_config.yml', 'r') as f:
-    log_config = yaml.safe_load(f.read())
-    logging.config.dictConfig(log_config)
 
 DB_ENGINE = create_engine(
     f"mysql+pymysql://{STORAGE_SETTING['user']}:{STORAGE_SETTING['password']}@{STORAGE_SETTING['hostname']}:{STORAGE_SETTING['port']}/{STORAGE_SETTING['db']}")

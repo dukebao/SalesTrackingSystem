@@ -136,3 +136,9 @@
 2022-11-15 22:30:50,225 - basicLogger - INFO - Merch Receiver Service : trace_id: 1a417380-d3ec-4865-b905-3c039bb76fcb status code 201
 2022-11-15 22:41:07,497 - basicLogger - INFO - Connected to kafka !!!
 2022-11-15 23:43:47,329 - basicLogger - INFO - Connected to kafka !!!
+2022-11-20 15:29:56,456 - basicLogger - INFO - Connected to kafka !!!
+2022-11-20 22:22:32,519 - basicLogger - INFO - App Conf File: app_config.yml
+2022-11-20 22:22:32,520 - basicLogger - INFO - Log Conf File: receiver_log_config.yml
+2022-11-20 22:22:32,613 - basicLogger - INFO - App Conf File: app_config.yml
+2022-11-20 22:22:32,613 - basicLogger - INFO - Log Conf File: receiver_log_config.yml
+2022-11-20 22:22:33,436 - basicLogger - INFO - Connected to kafka !!!
