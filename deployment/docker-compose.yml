@@ -45,7 +45,7 @@ services:
       - ./my-db:/var/lib/mysql
   receiver:
     container_name: receiver
-    build: ./receiver
+    build: ../receiver/
     image: receiver
     ports:
       - '8080:8080'
@@ -58,7 +58,7 @@ services:
       - /home/azureuser/logs/receiver:/logs
   storage:
     container_name: storage
-    build: ./storage
+    build: ../storage/
     image: storage
     ports:
       - '8090:8090'
@@ -72,7 +72,7 @@ services:
       - /home/azureuser/logs/storage:/logs
   processing:
     container_name: processing
-    build: ./processing
+    build: ../processing/
     image: processing
     ports:
       - '8100:8100'
@@ -86,7 +86,7 @@ services:
       - /home/azureuser/logs/processing:/logs
   audit:
     container_name: audit
-    build: ./audit
+    build: ../audit/
     image: audit
     ports:
       - '8110:8110'
@@ -101,7 +101,7 @@ services:
       - /home/azureuser/logs/audit:/logs
   dashboard:
     container_name: dashboard
-    build: ./dashboard
+    build: ../dashboard/
     image: dashboard
     ports:
       - "3000:3000"
@@ -111,7 +111,7 @@ services:
   
   healthcheck:
     container_name: healthcheck
-    build: ./healthcheck
+    build: ../healthcheck/
     image: healthcheck
     ports:
       - '8120:8120'
