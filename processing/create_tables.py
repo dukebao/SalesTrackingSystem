@@ -8,9 +8,7 @@ import sqlite3
 
 """
 
-
-
-conn = sqlite3.connect('processing_storage.sqlite')
+conn = sqlite3.connect('data/processing_storage.sqlite')
 
 c = conn.cursor()
 

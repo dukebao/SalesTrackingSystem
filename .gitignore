@@ -4,6 +4,6 @@ venv/*
 receiver/receiver_app.log
 storage/storage_app.log
 *.log
-# *.sqlite
+*.sqlite
 *.pyc
 *.log
