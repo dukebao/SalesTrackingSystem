@@ -84,6 +84,7 @@ services:
     volumes:
       - /home/azureuser/config/processing:/config
       - /home/azureuser/logs/processing:/logs
+      - /home/azureuser/processing-db:/app/data
   audit:
     container_name: audit
     build: ../audit/
