@@ -51,7 +51,7 @@ with open(log_conf_file, 'r') as f:
 #     logging.config.dictConfig(log_config)
 #     logger = logging.getLogger('basicLogger')
 
-
+storage_name = app_config['datastore']['filename']
 
 
 STORAGE_MERCH_URL = app_config['storage_merch']['url']
@@ -59,7 +59,7 @@ STORAGE_FOOD_URL = app_config['storage_food']['url']
 
 
 
-DB_ENGINE = create_engine("sqlite:///processing_storage.sqlite")
+DB_ENGINE = create_engine(f"sqlite:///{storage_name}")
 Base.metadata.bind = DB_ENGINE
 DB_SESSION = sessionmaker(bind=DB_ENGINE)
 
