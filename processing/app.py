@@ -23,6 +23,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import pytz
 from flask_cors import CORS, cross_origin
 import os 
+import create_tables
+
 
 TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 
@@ -242,5 +244,6 @@ CORS(app.app)
 app.app.config['CORS_HEADERS'] = 'Content-Type'
 
 if __name__ == '__main__':
+    create_tables.create_tables()
     init_scheduler()
     app.run(port=8100, use_reloader=False)

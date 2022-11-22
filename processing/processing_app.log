@@ -3490,3 +3490,27 @@
 2022-11-22 10:30:50,031 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': 'cb6365dd-078a-4a3d-a7c5-a23ee2d8e792', 'timestamp': datetime.datetime(2022, 11, 22, 18, 30, 49, 738467, tzinfo=<UTC>)}
 2022-11-22 10:30:50,042 - basicLogger - DEBUG - last row in database: [('cb6365dd-078a-4a3d-a7c5-a23ee2d8e792', 0.0, 0.0, '2022-11-22 18:30:49.738467')]
 2022-11-22 10:30:50,042 - basicLogger - INFO - INFO: finish populating stats
+2022-11-22 10:52:58,752 - basicLogger - INFO - App Conf File: app_config.yml
+2022-11-22 10:52:58,753 - basicLogger - INFO - Log Conf File: processing_log_config.yml
+2022-11-22 10:52:58,809 - basicLogger - INFO - App Conf File: app_config.yml
+2022-11-22 10:52:58,810 - basicLogger - INFO - Log Conf File: processing_log_config.yml
+2022-11-22 10:53:20,615 - basicLogger - INFO - App Conf File: app_config.yml
+2022-11-22 10:53:20,615 - basicLogger - INFO - Log Conf File: processing_log_config.yml
+2022-11-22 10:53:20,664 - basicLogger - INFO - App Conf File: app_config.yml
+2022-11-22 10:53:20,665 - basicLogger - INFO - Log Conf File: processing_log_config.yml
+2022-11-22 10:53:53,029 - basicLogger - INFO - App Conf File: app_config.yml
+2022-11-22 10:53:53,030 - basicLogger - INFO - Log Conf File: processing_log_config.yml
+2022-11-22 10:53:53,081 - basicLogger - INFO - App Conf File: app_config.yml
+2022-11-22 10:53:53,082 - basicLogger - INFO - Log Conf File: processing_log_config.yml
+2022-11-22 10:54:06,996 - basicLogger - INFO - App Conf File: app_config.yml
+2022-11-22 10:54:06,996 - basicLogger - INFO - Log Conf File: processing_log_config.yml
+2022-11-22 10:54:07,049 - basicLogger - INFO - App Conf File: app_config.yml
+2022-11-22 10:54:07,049 - basicLogger - INFO - Log Conf File: processing_log_config.yml
+2022-11-22 10:54:12,165 - basicLogger - INFO - Populating stats
+2022-11-22 10:54:12,368 - basicLogger - INFO - Request Success ! INFO: Food sales: 0
+2022-11-22 10:54:12,508 - basicLogger - INFO - Request Success ! INFO: Merch sales: 0
+2022-11-22 10:54:12,509 - basicLogger - DEBUG - INFO: body: {'merchSales': 0, 'foodSales': 0, 'trace_id': '06054a2d-c3d4-4edb-a663-a31f232fb053', 'timestamp': datetime.datetime(2022, 11, 22, 18, 54, 12, 166505, tzinfo=<UTC>)}
+2022-11-22 10:54:12,523 - basicLogger - DEBUG - INFO: updated start time: 2022-11-22 18:54:12.166505+00:00
+2022-11-22 10:54:12,523 - basicLogger - DEBUG - finish writting to database ,{'merchSales': 0, 'foodSales': 0, 'trace_id': '06054a2d-c3d4-4edb-a663-a31f232fb053', 'timestamp': datetime.datetime(2022, 11, 22, 18, 54, 12, 166505, tzinfo=<UTC>)}
+2022-11-22 10:54:12,533 - basicLogger - DEBUG - last row in database: [('06054a2d-c3d4-4edb-a663-a31f232fb053', 0.0, 0.0, '2022-11-22 18:54:12.166505')]
+2022-11-22 10:54:12,534 - basicLogger - INFO - INFO: finish populating stats

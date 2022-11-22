@@ -2,7 +2,7 @@ datastore:
   filename: ./data/processing_storage.sqlite
 scheduler:
   period_sec: 5
-  start_time: 2022-11-22 18:30:49.738467+00:00
+  start_time: 2022-11-22 18:54:12.166505+00:00
 storage_food:
   url: http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8090/food-stats
 storage_merch:

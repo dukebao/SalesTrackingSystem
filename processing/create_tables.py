@@ -8,17 +8,19 @@ import sqlite3
 
 """
 
-conn = sqlite3.connect('data/processing_storage.sqlite')
+def create_tables():
 
-c = conn.cursor()
+    conn = sqlite3.connect('data/processing_storage.sqlite')
 
-c.execute('''
-          CREATE TABLE SalesStats
-          (trace_id VARCHAR(250) NOT NULL, 
-           merchSales FLOAT NOT NULL,
-           foodSales FLOAT NOT NULL,
-           timestamp DATETIME NOT NULL)
-          ''')
+    c = conn.cursor()
 
-conn.commit()
-conn.close()
+    c.execute('''
+            CREATE TABLE IF NOT EXISTS SalesStats
+            (trace_id VARCHAR(250) NOT NULL, 
+            merchSales FLOAT NOT NULL,
+            foodSales FLOAT NOT NULL,
+            timestamp DATETIME NOT NULL)
+            ''')
+
+    conn.commit()
+    conn.close()
