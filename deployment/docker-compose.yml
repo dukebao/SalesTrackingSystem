@@ -44,7 +44,7 @@ services:
     volumes:
       - ./my-db:/var/lib/mysql
   receiver:
-    container_name: receiver
+    # container_name: receiver
     build: ../receiver/
     image: receiver
     ports:
@@ -57,7 +57,7 @@ services:
       - /home/azureuser/config/receiver:/config
       - /home/azureuser/logs/receiver:/logs
   storage:
-    container_name: storage
+    # container_name: storage
     build: ../storage/
     image: storage
     ports:
