@@ -123,9 +123,6 @@ services:
     image: healthcheck
     ports:
       - '8120:8120'
-    expose:
-      - '8120'
-    network_mode: "host"
   
   nginx:
     image: nginx:latest
@@ -144,6 +141,6 @@ services:
     - "80:80"
     networks:
       - "api.network"
-  
-  networks:
-    api.network:
+
+networks:
+  api.network:
