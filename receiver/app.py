@@ -28,14 +28,16 @@ TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 MAX_VALUES_ALLOWED_IN_DB = 10
 EVENT_FILE_OUT = 'data.json'
 
-if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
-    print("In Test Environment")
-    app_conf_file = "/config/app_config.yml"
-    log_conf_file = "/config/receiver_log_config.yml"
-else:
-    print("In Dev Environment")
-    app_conf_file = "app_config.yml"
-    log_conf_file = "receiver_log_config.yml"
+# if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
+#     print("In Test Environment")
+#     app_conf_file = "/config/app_config.yml"
+#     log_conf_file = "/config/receiver_log_config.yml"
+# else:
+#     print("In Dev Environment")
+#     app_conf_file = "app_config.yml"
+#     log_conf_file = "receiver_log_config.yml"
+app_conf_file = "app_config.yml"
+log_conf_file = "receiver_log_config.yml"
 with open(app_conf_file, 'r') as f:
     app_config = yaml.safe_load(f.read())
 # External Logging Configuration

@@ -4,7 +4,7 @@ scheduler:
   period_sec: 5
   start_time: 2022-11-22 18:54:12.166505+00:00
 storage_food:
-  url: http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8090/food-stats
+  url: http://steven-kafka-apple-banana.eastus.cloudapp.azure.com/storage/food-stats
 storage_merch:
-  url: http://steven-kafka-apple-banana.eastus.cloudapp.azure.com:8090/food-stats
+  url: http://steven-kafka-apple-banana.eastus.cloudapp.azure.com/storage/food-stats
 version: 1

@@ -24,14 +24,18 @@ import os
 
 TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 
-if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
-    print("In Test Environment")
-    app_conf_file = "/config/app_config.yml"
-    log_conf_file = "/config/storage_log_config.yml"
-else:
-    print("In Dev Environment")
-    app_conf_file = "app_config.yml"
-    log_conf_file = "storage_log_config.yml"
+# if "TARGET_ENV" in os.environ and os.environ["TARGET_ENV"] == "test":
+#     print("In Test Environment")
+#     app_conf_file = "/config/app_config.yml"
+#     log_conf_file = "/config/storage_log_config.yml"
+# else:
+#     print("In Dev Environment")
+#     app_conf_file = "app_config.yml"
+#     log_conf_file = "storage_log_config.yml"
+
+app_conf_file = "app_config.yml"
+log_conf_file = "storage_log_config.yml"
+
 with open(app_conf_file, 'r') as f:
     app_config = yaml.safe_load(f.read())
 # External Logging Configuration
