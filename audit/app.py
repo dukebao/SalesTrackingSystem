@@ -99,7 +99,8 @@ def getAuditFood(index):
 app = connexion.FlaskApp(__name__, specification_dir='')
 app.add_api('STEVENCHANG420-RetailFoodAPI_Template-1.0.0.yaml',
             strict_validation=True,
-            validate_responses=True)
+            validate_responses=True,
+            base_path="/audit")
 CORS(app.app)
 app.app.config['CORS_HEADERS'] = 'Content-Type'
 if __name__ == '__main__':
