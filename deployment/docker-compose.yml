@@ -145,3 +145,5 @@ services:
     networks:
       - "api.network"
   
+  networks:
+    api.network:
