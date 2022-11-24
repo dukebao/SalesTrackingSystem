@@ -23,6 +23,8 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import pytz
 from flask_cors import CORS, cross_origin
 import os 
+import create_tables
+
 
 TABLE_NAME_OPTIONS = ['merch_inventory', 'food_inventory']
 
@@ -51,7 +53,7 @@ with open(log_conf_file, 'r') as f:
 #     logging.config.dictConfig(log_config)
 #     logger = logging.getLogger('basicLogger')
 
-
+storage_name = app_config['datastore']['filename']
 
 
 STORAGE_MERCH_URL = app_config['storage_merch']['url']
@@ -59,7 +61,7 @@ STORAGE_FOOD_URL = app_config['storage_food']['url']
 
 
 
-DB_ENGINE = create_engine("sqlite:///processing_storage.sqlite")
+DB_ENGINE = create_engine(f"sqlite:///{storage_name}")
 Base.metadata.bind = DB_ENGINE
 DB_SESSION = sessionmaker(bind=DB_ENGINE)
 
@@ -242,5 +244,6 @@ CORS(app.app)
 app.app.config['CORS_HEADERS'] = 'Content-Type'
 
 if __name__ == '__main__':
+    create_tables.create_tables()
     init_scheduler()
     app.run(port=8100, use_reloader=False)
