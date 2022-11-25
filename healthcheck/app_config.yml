@@ -8,7 +8,7 @@ services:
   receiverStats: http://steven-kafka-apple-banana.eastus.cloudapp.azure.com/receiver/health
   storageStats:  http://steven-kafka-apple-banana.eastus.cloudapp.azure.com/storage/health
   processingStats:  http://steven-kafka-apple-banana.eastus.cloudapp.azure.com/processing/health
-  auditStats:  http://steven-kafka-apple-banana.eastus.cloudapp.azure.com/audit/health
+  auditStats:  http://steven-kafka-apple-banana.eastus.cloudapp.azure.com/audit_log/health
 
 
 kafka: # topic 
